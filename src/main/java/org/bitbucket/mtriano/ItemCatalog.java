@@ -12,9 +12,10 @@ public final class ItemCatalog {
 
     private static volatile ItemCatalog instance;
     private Map<String, String> mDict;
-    private ArrayList<Item> catalog;
-    private static Object sLock = new Object();
-    private volatile static boolean sIsLoaded = false;
+    private static ArrayList<Item> catalog;
+    private static ItemLoader loader = new ItemLoaderXML();
+//    private static Object sLock = new Object();
+//    private volatile static boolean sIsLoaded = false;
 
     public static ItemCatalog getInstance() {
         if (instance == null) {
@@ -28,13 +29,24 @@ public final class ItemCatalog {
     }
 
     private ItemCatalog() {
+//        ItemLoader loader = new ItemLoaderXML();
+        loader.loadItemFromFile("src/main/java/org/bitbucket/mtriano/ItemCatalog.xml");
+        catalog = loader.getItems();
+        System.out.println("loaded");
     }
 
     protected void loadItems() {
-        mDict = new HashMap<String, String>();
-        ItemLoader x = new ItemXMLLoader();
-        x.loadItemFromFile("src/main/java/org/bitbucket/mtriano/ItemCatalog.xml");
-        getInstance().catalog = x.getItems();
+//        ItemLoader loader = new ItemXMLLoader();
+//        loader.loadItemFromFile("src/main/java/org/bitbucket/mtriano/ItemCatalog.xml");
+//        getInstance().catalog = loader.getItems();
+//        mDict = new HashMap<String, String>();
+//        ItemLoader loader = new ItemLoaderXML();
+//        loader.loadItemFromFile();
+//        getInstance().catalog = ItemLoaderXML.getItems();
+        //ItemLoader x = new ItemLoaderXML();
+        //loadItemFromFile("src/main/java/org/bitbucket/mtriano/ItemCatalog.xml");
+        //getInstance().catalog = x.getItems();
+
         System.out.println("words");
     }
 

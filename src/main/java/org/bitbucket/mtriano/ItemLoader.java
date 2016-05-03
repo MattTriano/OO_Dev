@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public interface ItemLoader {
 
-    void loadItemFromFile(String filepath) throws InvalidDataException;
+    void loadItemFromFile(String filePath);
     ArrayList<Item> getItems();
 
 }

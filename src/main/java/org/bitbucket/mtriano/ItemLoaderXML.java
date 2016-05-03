@@ -11,17 +11,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * Created by Matt on 4/28/2016.
+ * Created by Matt on 5/3/2016.
  */
-public class ItemXMLLoader extends BaseItemLoader {
+public class ItemLoaderXML implements ItemLoader {
 
     ArrayList<Item> itemCatalog = new ArrayList<>();
     String defaultFilepath = "src/main/java/org/bitbucket/mtriano/ItemCatalog.xml";
-    NodeList itemEntries;
 
     public void loadItemFromFile(String filePath) {
         try {
-            filePath = this.defaultFilepath;
+            //String filePath = "src/main/java/org/bitbucket/mtriano/ItemCatalog.xml";
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
 
@@ -34,38 +33,31 @@ public class ItemXMLLoader extends BaseItemLoader {
             Document doc = db.parse(xml);
             doc.getDocumentElement().normalize();
             NodeList itemEntries = doc.getDocumentElement().getChildNodes();
-        } catch (ParserConfigurationException| SAXException| IOException| DOMException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
-    protected void onNodesLoaded(NodeList nodeList){
-        try {
-            for (int i = 0; i < nodeList.getLength(); i++) {
-                if (nodeList.item(i).getNodeType() == Node.TEXT_NODE) {
+            for (int i = 0; i < itemEntries.getLength(); i++) {
+                if (itemEntries.item(i).getNodeType() == Node.TEXT_NODE) {
                     continue;
                 }
 
-                String entryName = nodeList.item(i).getNodeName();
+                String entryName = itemEntries.item(i).getNodeName();
                 if (!entryName.equals("Item")) {
-                    System.err.println("Unexpected node found: " + entryName);
-                    return;
+                    throw new InvalidDataException("Unexpected node found: " + entryName);
                 }
 
-                Element elem = (Element) nodeList.item(i);
+                Element elem = (Element) itemEntries.item(i);
                 String itemID = elem.getElementsByTagName("ItemID").item(0).getTextContent();
                 int itemCost = Integer.parseInt(elem.getElementsByTagName("Price").item(0).getTextContent().replace("$", ""));
                 itemCatalog.add(ItemImplFactory.createItem(itemID, itemCost));
-                System.out.println("Added an item");
             }
-        } catch (InvalidDataException e){
+
+        } catch (ParserConfigurationException | SAXException | IOException |
+                DOMException | InvalidDataException e) {
             e.printStackTrace();
+            System.exit(-1);
         }
     }
 
     public ArrayList<Item> getItems() {
         return itemCatalog;
     }
-
 }
+

@@ -16,8 +16,10 @@ import java.util.ArrayList;
  * Created by Matt on 5/2/2016.
  */
 abstract public class BaseItemLoader implements ItemLoader {
+
+
     @Override
-    public void loadItemFromFile(String filePath) throws InvalidDataException {
+    public void loadItemFromFile(String filePath){
         NodeList nodeList = this.parseToNodeList(filePath);
         onNodesLoaded(nodeList);
     }
@@ -42,7 +44,7 @@ abstract public class BaseItemLoader implements ItemLoader {
         return null;
     }
 
-    protected abstract void onNodesLoaded(NodeList nodeList) throws InvalidDataException;
+    protected abstract void onNodesLoaded(NodeList nodeList);
 
     @Override
     public ArrayList<Item> getItems() {
