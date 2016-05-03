@@ -17,7 +17,7 @@ import java.util.ArrayList;
  */
 abstract public class BaseItemLoader implements ItemLoader {
     @Override
-    public void loadItemFromFile(String filePath) {
+    public void loadItemFromFile(String filePath) throws InvalidDataException {
         NodeList nodeList = this.parseToNodeList(filePath);
         onNodesLoaded(nodeList);
     }
@@ -28,9 +28,6 @@ abstract public class BaseItemLoader implements ItemLoader {
             DocumentBuilder db = dbf.newDocumentBuilder();
 
             File xml = new File(filePath);
-//            String cwd = System.getProperty("user.dir");
-//            System.out.println("Current Working Directory: " + System.getProperty("user.dir"));
-//            System.out.println(xml.toString());
             if (!xml.exists()) {
                 System.err.println("**** XML File '" + filePath + "' cannot be found");
                 System.exit(-1);

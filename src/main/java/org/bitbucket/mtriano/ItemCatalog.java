@@ -33,45 +33,24 @@ public final class ItemCatalog {
     protected void loadItems() {
         mDict = new HashMap<String, String>();
         ItemLoader x = new ItemXMLLoader();
-        x.loadItems();
+        x.loadItemFromFile("src/main/java/org/bitbucket/mtriano/ItemCatalog.xml");
         getInstance().catalog = x.getItems();
         System.out.println("words");
     }
 
-    private void doStuff() {
-        this.mDict.clear();
-    }
-
-    private static Map<String, String> getItemDict() {
-        synchronized (sLock) {
-            if(!sIsLoaded) {
-                getInstance().loadItems();
-                sIsLoaded = true;
-            }
-            return getInstance().mDict;
-        }
-    }
+//    private static Map<String, String> getItemDict() {
+//        synchronized (sLock) {
+//            if(!sIsLoaded) {
+//                getInstance().loadItems();
+//                sIsLoaded = true;
+//            }
+//            return getInstance().mDict;
+//        }
+//    }
 
     public ArrayList<Item> getCatalog() {
         return getInstance().catalog;
     }
-
-    public static Map<String, String> getDict() {
-        return getItemDict();
-    }
-
-    public static void addItem(String key, String val) {
-        synchronized (sLock) {
-            ItemCatalog.getItemDict().put(key, val);
-        }
-    }
-
-    public static String getItem(String key) {
-        synchronized (sLock) {
-            return ItemCatalog.getItemDict().get(key);
-        }
-    }
-
 
 //    boolean isItem(String itemID) {
 //

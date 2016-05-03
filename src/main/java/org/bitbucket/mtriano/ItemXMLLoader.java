@@ -26,9 +26,6 @@ public class ItemXMLLoader extends BaseItemLoader {
             DocumentBuilder db = dbf.newDocumentBuilder();
 
             File xml = new File(filePath);
-//            String cwd = System.getProperty("user.dir");
-//            System.out.println("Current Working Directory: " + System.getProperty("user.dir"));
-//            System.out.println(xml.toString());
             if (!xml.exists()) {
                 System.err.println("**** XML File '" + filePath + "' cannot be found");
                 System.exit(-1);
@@ -37,7 +34,7 @@ public class ItemXMLLoader extends BaseItemLoader {
             Document doc = db.parse(xml);
             doc.getDocumentElement().normalize();
             NodeList itemEntries = doc.getDocumentElement().getChildNodes();
-        } catch (ParserConfigurationException| SAXException| IOException| InvalidDataException | DOMException e) {
+        } catch (ParserConfigurationException| SAXException| IOException| DOMException e) {
             e.printStackTrace();
         }
     }
@@ -57,7 +54,6 @@ public class ItemXMLLoader extends BaseItemLoader {
                 }
 
                 Element elem = (Element) nodeList.item(i);
-
                 String itemID = elem.getElementsByTagName("ItemID").item(0).getTextContent();
                 int itemCost = Integer.parseInt(elem.getElementsByTagName("Price").item(0).getTextContent().replace("$", ""));
                 itemCatalog.add(ItemImplFactory.createItem(itemID, itemCost));
