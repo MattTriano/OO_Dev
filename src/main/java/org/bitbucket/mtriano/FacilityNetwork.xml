@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FacilityNetwork>
+
+    <Facility City="Seattle, WA">
+        <Rate>8</Rate>
+        <Cost>$300</Cost>
+        <Item>
+            <ItemID>ABC123</ItemID>
+            <Quantity>45</Quantity>
+        </Item>
+        <Item>
+            <ItemID>JBL3100</ItemID>
+            <Quantity>52</Quantity>
+        </Item>
+        <Item>
+            <ItemID>PL132-C</ItemID>
+            <Quantity>4</Quantity>
+        </Item>
+        <Item>
+            <ItemID>PU238</ItemID>
+            <Quantity>60</Quantity>
+        </Item>
+        <Link>
+            <City>Fargo, ND</City>
+            <Distance>1426</Distance>
+        </Link>
+        <Link>
+            <City>San Francisco, CA</City>
+            <Distance>808</Distance>
+        </Link>
+    </Facility>
+    <Facility City="San Francisco, CA">
+        <Rate>12</Rate>
+        <Cost>$300</Cost>
+        <Item>
+            <ItemID>RL123A</ItemID>
+            <Quantity>40</Quantity>
+        </Item>
+        <Item>
+            <ItemID>XLK200B</ItemID>
+            <Quantity>8</Quantity>
+        </Item>
+        <Item>
+            <ItemID>SR71-D</ItemID>
+            <Quantity>81</Quantity>
+        </Item>
+        <Item>
+            <ItemID>CT1928</ItemID>
+            <Quantity>46</Quantity>
+        </Item>
+        <Link>
+            <City>Seattle, WA</City>
+            <Distance>808</Distance>
+        </Link>
+        <Link>
+            <City>Denver, CO</City>
+            <Distance>1249</Distance>
+        </Link>
+        <Link>
+            <City>Los Angeles, CA</City>
+            <Distance>382</Distance>
+        </Link>
+    </Facility>
+    <Facility City="Los Angeles, CA">
+        <Rate>10</Rate>
+        <Cost>$300</Cost>
+        <Item>
+            <ItemID>RX100-3</ItemID>
+            <Quantity>57</Quantity>
+        </Item>
+        <Item>
+            <ItemID>JBL3100</ItemID>
+            <Quantity>60</Quantity>
+        </Item>
+        <Item>
+            <ItemID>E241i</ItemID>
+            <Quantity>44</Quantity>
+        </Item>
+        <Item>
+            <ItemID>XTP202</ItemID>
+            <Quantity>32</Quantity>
+        </Item>
+        <Link>
+            <City>San Francisco, CA</City>
+            <Distance>382</Distance>
+        </Link>
+        <Link>
+            <City>Phoenix, AZ</City>
+            <Distance>372</Distance>
+        </Link>
+    </Facility>
+    <Facility City="Phoenix, AZ">
+        <Rate>8</Rate>
+        <Cost>$300</Cost>
+        <Item>
+            <ItemID>RX100-3</ItemID>
+            <Quantity>18</Quantity>
+        </Item>
+        <Item>
+            <ItemID>SR71-D</ItemID>
+            <Quantity>55</Quantity>
+        </Item>
+        <Item>
+            <ItemID>SN-241-L</ItemID>
+            <Quantity>22</Quantity>
+        </Item>
+        <Item>
+            <ItemID>ZTF109</ItemID>
+            <Quantity>54</Quantity>
+        </Item>
+        <Link>
+            <City>Los Angeles, CA</City>
+            <Distance>372</Distance>
+        </Link>
+        <Link>
+            <City>Santa Fe, NM</City>
+            <Distance>480</Distance>
+        </Link>
+    </Facility>
+    <Facility City="Denver, CO">
+        <Rate>10</Rate>
+        <Cost>$300</Cost>
+        <Item>
+            <ItemID>ABC123</ItemID>
+            <Quantity>80</Quantity>
+        </Item>
+        <Item>
+            <ItemID>RL123A</ItemID>
+            <Quantity>110</Quantity>
+        </Item>
+        <Item>
+            <ItemID>RTF110</ItemID>
+            <Quantity>100</Quantity>
+        </Item>
+        <Link>
+            <City>San Francisco, CA</City>
+            <Distance>1249</Distance>
+        </Link>
+        <Link>
+            <City>Santa Fe, NM</City>
+            <Distance>392</Distance>
+        </Link>
+        <Link>
+            <City>Fargo, ND</City>
+            <Distance>889</Distance>
+        </Link>
+        <Link>
+            <City>St. Louis, MO</City>
+            <Distance>851</Distance>
+        </Link>
+    </Facility>
+    <Facility City="Santa Fe, NM">
+        <Rate>8</Rate>
+        <Cost>$300</Cost>
+        <Item>
+            <ItemID>RX100-3</ItemID>
+            <Quantity>144</Quantity>
+        </Item>
+        <Item>
+            <ItemID>CR2032</ItemID>
+            <Quantity>280</Quantity>
+        </Item>
+        <Link>
+            <City>Phoenix, AZ</City>
+            <Distance>480</Distance>
+        </Link>
+        <Link>
+            <City>Denver, CO</City>
+            <Distance>392</Distance>
+        </Link>
+        <Link>
+            <City>St. Louis, MO</City>
+            <Distance>1032</Distance>
+        </Link>
+        <Link>
+            <City>Austin, TX</City>
+            <Distance>688</Distance>
+        </Link>
+    </Facility>
+    <Facility City="Fargo, ND">
+        <Rate>8</Rate>
+        <Cost>$300</Cost>
+        <Item>
+            <ItemID>ABC123</ItemID>
+            <Quantity>25</Quantity>
+        </Item>
+        <Item>
+            <ItemID>JBL3100</ItemID>
+            <Quantity>32</Quantity>
+        </Item>
+        <Item>
+            <ItemID>XLK200B</ItemID>
+            <Quantity>82</Quantity>
+        </Item>
+        <Link>
+            <City>Seattle, WA</City>
+            <Distance>1426</Distance>
+        </Link>
+        <Link>
+            <City>Denver, CO</City>
+            <Distance>889</Distance>
+        </Link>
+        <Link>
+            <City>Chicago, IL</City>
+            <Distance>643</Distance>
+        </Link>
+    </Facility>
+    <Facility City="Austin, TX">
+        <Rate>10</Rate>
+        <Cost>$300</Cost>
+        <Item>
+            <ItemID>RL123A</ItemID>
+            <Quantity>66</Quantity>
+        </Item>
+        <Item>
+            <ItemID>RX100-3</ItemID>
+            <Quantity>35</Quantity>
+        </Item>
+        <Item>
+            <ItemID>SN-241-L</ItemID>
+            <Quantity>35</Quantity>
+        </Item>
+        <Link>
+            <City>Santa Fe, NM</City>
+            <Distance>688</Distance>
+        </Link>
+        <Link>
+            <City>St. Louis, MO</City>
+            <Distance>825</Distance>
+        </Link>
+        <Link>
+            <City>New Orleans, LA</City>
+            <Distance>512</Distance>
+        </Link>
+    </Facility>
+    <Facility City="St. Louis, MO">
+        <Rate>12</Rate>
+        <Cost>$300</Cost>
+        <Item>
+            <ItemID>ABC123</ItemID>
+            <Quantity>70</Quantity>
+        </Item>
+        <Item>
+            <ItemID>SR71-D</ItemID>
+            <Quantity>45</Quantity>
+        </Item>
+        <Item>
+            <ItemID>PU238</ItemID>
+            <Quantity>82</Quantity>
+        </Item>
+        <Link>
+            <City>Chicago, IL</City>
+            <Distance>297</Distance>
+        </Link>
+        <Link>
+            <City>Nashville, TN</City>
+            <Distance>309</Distance>
+        </Link>
+        <Link>
+            <City>Austin, TX</City>
+            <Distance>825</Distance>
+        </Link>
+        <Link>
+            <City>Santa Fe, NM</City>
+            <Distance>1032</Distance>
+        </Link>
+        <Link>
+            <City>Denver, CO</City>
+            <Distance>851</Distance>
+        </Link>
+    </Facility>
+    <Facility City="Chicago, IL">
+        <Item>
+            <ItemID>ABC123</ItemID>
+            <Quantity>60</Quantity>
+        </Item>
+        <Item>
+            <ItemID>E241i</ItemID>
+            <Quantity>64</Quantity>
+        </Item>
+        <Item>
+            <ItemID>CT1928</ItemID>
+            <Quantity>20</Quantity>
+        </Item>
+        <Item>
+            <ItemID>RTF110</ItemID>
+            <Quantity>110</Quantity>
+        </Item>
+        <Item>
+            <ItemID>XTP202</ItemID>
+            <Quantity>20</Quantity>
+        </Item>
+        <Rate>10</Rate>
+        <Cost>$300</Cost>
+        <Link>
+            <City>Fargo, ND</City>
+            <Distance>643</Distance>
+        </Link>
+        <Link>
+            <City>St. Louis, MO</City>
+            <Distance>297</Distance>
+        </Link>
+        <Link>
+            <City>New York City, NY</City>
+            <Distance>790</Distance>
+        </Link>
+        <Link>
+            <City>Detroit, MI</City>
+            <Distance>282</Distance>
+        </Link>
+    </Facility>
+    <Facility City="New Orleans, LA">
+        <Rate>10</Rate>
+        <Cost>$300</Cost>
+        <Item>
+            <ItemID>MM35P</ItemID>
+            <Quantity>100</Quantity>
+        </Item>
+        <Item>
+            <ItemID>PU238</ItemID>
+            <Quantity>49</Quantity>
+        </Item>
+        <Item>
+            <ItemID>ZTF109</ItemID>
+            <Quantity>120</Quantity>
+        </Item>
+        <Link>
+            <City>Austin, TX</City>
+            <Distance>512</Distance>
+        </Link>
+        <Link>
+            <City>Nashville, TN</City>
+            <Distance>532</Distance>
+        </Link>
+        <Link>
+            <City>Atlanta, GA</City>
+            <Distance>469</Distance>
+        </Link>
+        <Link>
+            <City>Miami, FL</City>
+            <Distance>864</Distance>
+        </Link>
+    </Facility>
+    <Facility City="Nashville, TN">
+        <Rate>8</Rate>
+        <Cost>$300</Cost>
+        <Item>
+            <ItemID>RX100-3</ItemID>
+            <Quantity>78</Quantity>
+        </Item>
+        <Item>
+            <ItemID>XLK200B</ItemID>
+            <Quantity>28</Quantity>
+        </Item>
+        <Item>
+            <ItemID>CR2032</ItemID>
+            <Quantity>366</Quantity>
+        </Item>
+        <Item>
+            <ItemID>SN-241-L</ItemID>
+            <Quantity>16</Quantity>
+        </Item>
+        <Link>
+            <City>St. Louis, MO</City>
+            <Distance>309</Distance>
+        </Link>
+        <Link>
+            <City>New Orleans, LA</City>
+            <Distance>532</Distance>
+        </Link>
+        <Link>
+            <City>Norfolk, VA</City>
+            <Distance>706</Distance>
+        </Link>
+    </Facility>
+    <Facility City="Detroit, MI">
+        <Rate>10</Rate>
+        <Cost>$300</Cost>
+        <Item>
+            <ItemID>JBL3100</ItemID>
+            <Quantity>117</Quantity>
+        </Item>
+        <Item>
+            <ItemID>SR71-D</ItemID>
+            <Quantity>8</Quantity>
+        </Item>
+        <Item>
+            <ItemID>CT1928</ItemID>
+            <Quantity>72</Quantity>
+        </Item>
+        <Link>
+            <City>Chicago, IL</City>
+            <Distance>282</Distance>
+        </Link>
+        <Link>
+            <City>New York City, NY</City>
+            <Distance>614</Distance>
+        </Link>
+        <Link>
+            <City>Boston, MA</City>
+            <Distance>719</Distance>
+        </Link>
+    </Facility>
+    <Facility City="Boston, MA">
+        <Rate>10</Rate>
+        <Cost>$300</Cost>
+        <Item>
+            <ItemID>MM35P</ItemID>
+            <Quantity>47</Quantity>
+        </Item>
+        <Item>
+            <ItemID>PL132-C</ItemID>
+            <Quantity>3</Quantity>
+        </Item>
+        <Item>
+            <ItemID>CT1928</ItemID>
+            <Quantity>65</Quantity>
+        </Item>
+        <Link>
+            <City>Detroit, MI</City>
+            <Distance>719</Distance>
+        </Link>
+        <Link>
+            <City>New York City, NY</City>
+            <Distance>215</Distance>
+        </Link>
+    </Facility>
+    <Facility City="New York City, NY">
+        <Rate>14</Rate>
+        <Cost>$300</Cost>
+        <Item>
+            <ItemID>RL123A</ItemID>
+            <Quantity>12</Quantity>
+        </Item>
+        <Item>
+            <ItemID>CR2032</ItemID>
+            <Quantity>132</Quantity>
+        </Item>
+        <Item>
+            <ItemID>E241i</ItemID>
+            <Quantity>72</Quantity>
+        </Item>
+        <Item>
+            <ItemID>ZTF109</ItemID>
+            <Quantity>28</Quantity>
+        </Item>
+        <Link>
+            <City>Boston, MA</City>
+            <Distance>215</Distance>
+        </Link>
+        <Link>
+            <City>Detroit, MI</City>
+            <Distance>614</Distance>
+        </Link>
+        <Link>
+            <City>Chicago, IL</City>
+            <Distance>790</Distance>
+        </Link>
+        <Link>
+            <City>Norfolk, VA</City>
+            <Distance>363</Distance>
+        </Link>
+    </Facility>
+    <Facility City="Norfolk, VA">
+        <Rate>10</Rate>
+        <Cost>$300</Cost>
+        <Item>
+            <ItemID>MM35P</ItemID>
+            <Quantity>66</Quantity>
+        </Item>
+        <Item>
+            <ItemID>RL123A</ItemID>
+            <Quantity>50</Quantity>
+        </Item>
+        <Item>
+            <ItemID>XLK200B</ItemID>
+            <Quantity>14</Quantity>
+        </Item>
+        <Link>
+            <City>New York City, NY</City>
+            <Distance>363</Distance>
+        </Link>
+        <Link>
+            <City>Nashville, TN</City>
+            <Distance>706</Distance>
+        </Link>
+        <Link>
+            <City>Atlanta</City>
+            <Distance>566</Distance>
+        </Link>
+    </Facility>
+    <Facility City="Atlanta, GA">
+        <Rate>10</Rate>
+        <Cost>$300</Cost>
+        <Item>
+            <ItemID>RX100-3</ItemID>
+            <Quantity>90</Quantity>
+        </Item>
+        <Item>
+            <ItemID>E241i</ItemID>
+            <Quantity>32</Quantity>
+        </Item>
+        <Item>
+            <ItemID>PU238</ItemID>
+            <Quantity>120</Quantity>
+        </Item>
+        <Link>
+            <City>Norfolk, VA</City>
+            <Distance>566</Distance>
+        </Link>
+        <Link>
+            <City>New Orleans, LA</City>
+            <Distance>469</Distance>
+        </Link>
+        <Link>
+            <City>Miami, FL</City>
+            <Distance>663</Distance>
+        </Link>
+    </Facility>
+    <Facility City="Miami, FL">
+        <Rate>12</Rate>
+        <Cost>$300</Cost>
+        <Item>
+            <ItemID>MM35P</ItemID>
+            <Quantity>16</Quantity>
+        </Item>
+        <Item>
+            <ItemID>JBL3100</ItemID>
+            <Quantity>44</Quantity>
+        </Item>
+        <Item>
+            <ItemID>SR71-D</ItemID>
+            <Quantity>15</Quantity>
+        </Item>
+        <Item>
+            <ItemID>SN-241-L</ItemID>
+            <Quantity>28</Quantity>
+        </Item>
+        <Item>
+            <ItemID>XTP202</ItemID>
+            <Quantity>88</Quantity>
+        </Item>
+        <Link>
+            <City>Atlanta, GA</City>
+            <Distance>566</Distance>
+        </Link>
+        <Link>
+            <City>New Orleans, LA</City>
+            <Distance>864</Distance>
+        </Link>
+    </Facility>
+
+</FacilityNetwork>

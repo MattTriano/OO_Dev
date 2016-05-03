@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ItemCatalog>
+
+    <Item>
+        <ItemID>ABC123</ItemID>
+        <Price>$550</Price>
+    </Item>
+    <Item>
+        <ItemID>CR2032</ItemID>
+        <Price>$240</Price>
+    </Item>
+    <Item>
+        <ItemID>CT1928</ItemID>
+        <Price>$910</Price>
+    </Item>
+    <Item>
+        <ItemID>E241i</ItemID>
+        <Price>$10400</Price>
+    </Item>
+    <Item>
+        <ItemID>JBL3100</ItemID>
+        <Price>$180</Price>
+    </Item>
+    <Item>
+        <ItemID>MM35P</ItemID>
+        <Price>$1950</Price>
+    </Item>
+    <Item>
+        <ItemID>PL132-C</ItemID>
+        <Price>$440</Price>
+    </Item>
+    <Item>
+        <ItemID>PU238</ItemID>
+        <Price>$2200</Price>
+    </Item>
+    <Item>
+        <ItemID>RL123A</ItemID>
+        <Price>$360</Price>
+    </Item>
+    <Item>
+        <ItemID>RTF110</ItemID>
+        <Price>$715</Price>
+    </Item>
+    <Item>
+        <ItemID>RX100-3</ItemID>
+        <Price>$642</Price>
+    </Item>
+    <Item>
+        <ItemID>SN-241-L</ItemID>
+        <Price>$620</Price>
+    </Item>
+    <Item>
+        <ItemID>SR71-D</ItemID>
+        <Price>$1600</Price>
+    </Item>
+    <Item>
+        <ItemID>XLK200B</ItemID>
+        <Price>$820</Price>
+    </Item>
+    <Item>
+        <ItemID>XTP202</ItemID>
+        <Price>$345</Price>
+    </Item>
+    <Item>
+        <ItemID>ZTF109</ItemID>
+        <Price>$1100</Price>
+    </Item>
+
+</ItemCatalog>
