@@ -5,7 +5,7 @@ package org.bitbucket.mtriano;
  */
 public class ItemImplFactory {
 
-    public static Item createItem(String itemID, int itemCost) throws InvalidDataException {
+    public static Item createItem(String itemID, double itemCost) throws InvalidDataException {
         return new ItemImpl(itemID, itemCost);
     }
 }

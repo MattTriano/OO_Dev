@@ -7,13 +7,9 @@ import java.util.ArrayList;
  */
 public interface Facility {
 
-    String getCity();
-
+    String getCityID();
     int getRate();
     int getCost();
-    ArrayList<Item> getInventory();
-
-
-
-
+    ArrayList<Stock> getInventory();
+    ArrayList<LinkedCity> getLinkedCities();
 }

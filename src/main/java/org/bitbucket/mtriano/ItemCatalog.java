@@ -11,11 +11,8 @@ import java.util.stream.Stream;
 public final class ItemCatalog {
 
     private static volatile ItemCatalog instance;
-    private Map<String, String> mDict;
     private static ArrayList<Item> catalog;
     private static ItemLoader loader = new ItemLoaderXML();
-//    private static Object sLock = new Object();
-//    private volatile static boolean sIsLoaded = false;
 
     public static ItemCatalog getInstance() {
         if (instance == null) {
@@ -29,46 +26,25 @@ public final class ItemCatalog {
     }
 
     private ItemCatalog() {
-//        ItemLoader loader = new ItemLoaderXML();
         loader.loadItemFromFile("src/main/java/org/bitbucket/mtriano/ItemCatalog.xml");
         catalog = loader.getItems();
         System.out.println("loaded");
     }
 
-    protected void loadItems() {
-//        ItemLoader loader = new ItemXMLLoader();
-//        loader.loadItemFromFile("src/main/java/org/bitbucket/mtriano/ItemCatalog.xml");
-//        getInstance().catalog = loader.getItems();
-//        mDict = new HashMap<String, String>();
-//        ItemLoader loader = new ItemLoaderXML();
-//        loader.loadItemFromFile();
-//        getInstance().catalog = ItemLoaderXML.getItems();
-        //ItemLoader x = new ItemLoaderXML();
-        //loadItemFromFile("src/main/java/org/bitbucket/mtriano/ItemCatalog.xml");
-        //getInstance().catalog = x.getItems();
-
-        System.out.println("words");
-    }
-
-//    private static Map<String, String> getItemDict() {
-//        synchronized (sLock) {
-//            if(!sIsLoaded) {
-//                getInstance().loadItems();
-//                sIsLoaded = true;
-//            }
-//            return getInstance().mDict;
-//        }
-//    }
-
     public ArrayList<Item> getCatalog() {
         return getInstance().catalog;
     }
 
-//    boolean isItem(String itemID) {
-//
-//
-//    }
-
-
-
+    public boolean isItem(String itemID) throws InvalidDataException {
+        if (itemID == null) {
+            throw new InvalidDataException("ItemID not valid (it's null).");
+        }
+        catalog = getCatalog();
+        for (Item item : catalog) {
+            if (item.getID().equals(itemID)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
