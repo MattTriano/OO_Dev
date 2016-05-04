@@ -14,9 +14,14 @@ public class Main {
             for (Item item : catalog) {
                 System.out.println("Item " + item.getID() + " costs $" + item.getCost());
             }
-
-            System.out.println(catalog.toString());
             System.out.println("Catalogs:");
+
+            FacilityNetwork net = FacilityNetwork.getInstance();
+            ArrayList<Facility> network = FacilityNetwork.getInstance().getNetwork();
+
+            System.out.println("networks:");
+
+
 
         } catch (InvalidDataException e) {
             e.printStackTrace();

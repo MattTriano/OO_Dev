@@ -45,7 +45,8 @@ public class ItemLoaderXML implements ItemLoader {
 
                 Element elem = (Element) itemEntries.item(i);
                 String itemID = elem.getElementsByTagName("ItemID").item(0).getTextContent();
-                int itemCost = Integer.parseInt(elem.getElementsByTagName("Price").item(0).getTextContent().replace("$", ""));
+                int itemCost = Integer.parseInt(elem.getElementsByTagName("Price")
+                        .item(0).getTextContent().replace("$", ""));
                 itemCatalog.add(ItemImplFactory.createItem(itemID, itemCost));
             }
 

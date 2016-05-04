@@ -23,10 +23,16 @@ public final class FacilityNetwork {
     }
 
     private FacilityNetwork() {
-        loader.loadNetworkFromFile("src/main/java/org/bitbucket/mtriano/FacilityNetwork.xml");
+        loader.loadNetworkFromFile("src/main/java/org/bitbucket/mtriano/" +
+                "FacilityNetwork.xml");
         network = loader.getFacilities();
         System.out.println("loaded");
     }
+
+    public ArrayList<Facility> getNetwork() {
+        return getInstance().network;
+    }
+
 
 
 
