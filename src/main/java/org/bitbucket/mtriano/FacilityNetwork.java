@@ -42,6 +42,15 @@ public final class FacilityNetwork {
         return null;
     }
 
+    // i want to test mapPairs
+    public ArrayList<Facility> testShortestPath() throws InvalidDataException {
+        Facility start = getFacility("Detroit, MI");
+        Facility end = getFacility("San Francisco, CA");
+        ShortestPath path = ShortestPathAllPairsImplFactory.CreateShortestPath(start, end);
+        path.mapPairs(start);
+        return null;
+    }
+
     public ArrayList<Facility> getLinkedFacilities(ArrayList<LinkedCity> links)
             throws InvalidDataException{
         ArrayList<Facility> linkedFacilities = new ArrayList<>();

@@ -21,6 +21,10 @@ public class Main {
 
             System.out.println("networks:");
 
+            ArrayList<Facility> stuff = net.testShortestPath();
+
+
+
 
 
         } catch (InvalidDataException e) {

@@ -11,5 +11,6 @@ public interface ShortestPath {
             throws InvalidDataException;
     ArrayList<String> getPathCities() throws InvalidDataException;
     Integer getPathDistance() throws InvalidDataException;
+    void mapPairs(Facility init) throws InvalidDataException;
 
 }
