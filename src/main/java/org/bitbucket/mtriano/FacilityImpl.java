@@ -57,4 +57,18 @@ public class FacilityImpl implements Facility {
         return linkedCities;
     }
 
+    //todo delete this
+//    public ArrayList<Facility> getLinkedFacilities() throws InvalidDataException {
+//        ArrayList<Facility> network = FacilityNetwork.getInstance().getNetwork();
+//        ArrayList<Facility> linkedFacilities = new ArrayList<>();
+//        for (LinkedCity city : linkedCities) {
+//            for (Facility facility : network) {
+//                if (facility.getCityID().equals(city.getCityID())) {
+//                    linkedFacilities.add(facility);
+//                }
+//            }
+//        }
+//        return linkedFacilities;
+//    }
+
 }

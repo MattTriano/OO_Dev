@@ -33,8 +33,25 @@ public final class FacilityNetwork {
         return getInstance().network;
     }
 
+    public Facility getFacility(String cityID) throws InvalidDataException {
+        for (Facility facility : network) {
+            if (facility.getCityID().equals(cityID)) {
+                return facility;
+            }
+        }
+        return null;
+    }
 
-
-
+    public ArrayList<Facility> getLinkedFacilities(ArrayList<LinkedCity> links)
+            throws InvalidDataException{
+        ArrayList<Facility> linkedFacilities = new ArrayList<>();
+        for (LinkedCity city : links) {
+            Facility facility = getFacility(city.getCityID());
+            if (facility != null) {
+                linkedFacilities.add(facility);
+            }
+        }
+        return linkedFacilities;
+    }
 }
 
