@@ -11,17 +11,15 @@ public class Main {
             ItemCatalog cat = ItemCatalog.getInstance();
             ArrayList<Item> catalog = ItemCatalog.getInstance().getCatalog();
 
-            for (Item item : catalog) {
-                System.out.println("Item " + item.getID() + " costs $" + item.getCost());
-            }
-            System.out.println("Catalogs:");
-
             FacilityNetwork net = FacilityNetwork.getInstance();
             ArrayList<Facility> network = FacilityNetwork.getInstance().getNetwork();
 
-            System.out.println("networks:");
+            
+            ArrayList<Facility> lowPath = net.getShortestPath("Boston, MA", "Phoenix, AZ");
 
-            ArrayList<Facility> stuff = net.testShortestPath();
+            for (Facility fac : lowPath) {
+                System.out.println(fac.getCityID() + " links to ");
+            }
 
 
 

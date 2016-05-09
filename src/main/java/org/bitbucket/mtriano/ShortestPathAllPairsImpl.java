@@ -13,8 +13,8 @@ public class ShortestPathAllPairsImpl implements ShortestPath {
     private ArrayList<Facility> network;
     private HashMap<Pair, Integer> pairs = new HashMap<>();
     private HashSet<Facility> seen = new HashSet<>();
-    private ArrayList<Facility> lowPath = new ArrayList<>();
-    private Integer lowPathLength = Integer.MAX_VALUE;   // initializing to 'infinity'
+    private ArrayList<Facility> lowPath;
+    private Integer lowPathLength;   // initializing to 'infinity'
     private Facility startFacility;
     private Facility endFacility;
 
@@ -83,7 +83,6 @@ public class ShortestPathAllPairsImpl implements ShortestPath {
             if (pathLength < lowPathLength) {
                 lowPath = pathList;
                 lowPathLength = pathLength;
-                System.out.println("Current shortest path is " + lowPathLength + " long.");
                 return;
             }
         }
@@ -118,37 +117,30 @@ public class ShortestPathAllPairsImpl implements ShortestPath {
     public ArrayList<Facility> findBestPath(Facility start, Facility end) throws InvalidDataException {
         mapPairs(start);
         seen = new HashSet<>();
+        lowPath = new ArrayList<>();
+        lowPathLength = Integer.MAX_VALUE;
         ArrayList<Facility> pathList = new ArrayList<>();
         pathList.add(start);
         findPath(start, end, pathList);
         return lowPath;
     }
 
-    public ArrayList<Facility> shortestPath(Facility originFac,
-                                            Facility destinationFac) {
-        return lowPath;
-
-    }
-
     public ArrayList<Facility> getLowPath() throws InvalidDataException {
         return lowPath;
     }
 
-    public ArrayList<String> getPathCities() {
-        return null;
+    public Integer getPathDistance(ArrayList<Facility> path)
+            throws InvalidDataException {
+        if (path == null) {
+            throw new InvalidDataException("lowPath is null! It has no distance!");
+        }
+        return pathDistance(lowPath);
     }
 
-    public Integer getPathDistance() {
-        return null;
+    public Double getTravelTime(int speed) throws InvalidDataException {
+        if (speed < 0) {
+            throw new InvalidDataException("Negative speed entered! Illegal!");
+        }
+        return (double) getPathDistance(lowPath)/speed;
     }
-
-
-
-
-
-
-
-
-
-
 }

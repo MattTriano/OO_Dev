@@ -9,11 +9,12 @@ public interface ShortestPath {
 
     ArrayList<Facility> findBestPath(Facility originFac, Facility destinationFac)
             throws InvalidDataException;
-    ArrayList<String> getPathCities() throws InvalidDataException;
-    Integer getPathDistance() throws InvalidDataException;
+    Integer getPathDistance(ArrayList<Facility> path)
+            throws InvalidDataException;
     void mapPairs(Facility init) throws InvalidDataException;
     void findPath(Facility start, Facility end, ArrayList<Facility> pathList)
             throws InvalidDataException ;
     ArrayList<Facility> getLowPath() throws InvalidDataException;
+    Double getTravelTime(int speed) throws InvalidDataException;
 
 }

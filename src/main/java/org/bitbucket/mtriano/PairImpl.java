@@ -13,6 +13,9 @@ public class PairImpl implements Pair {
     private Facility facilityB;
     private int distance;
 
+    /*
+
+     */
     public PairImpl(Facility facA, Facility facB) throws InvalidDataException {
         ArrayList<String> linkedIDs = new ArrayList<>();
         ArrayList<LinkedCity> links = facB.getLinkedCities();

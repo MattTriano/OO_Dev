@@ -28,7 +28,6 @@ public final class ItemCatalog {
     private ItemCatalog() {
         loader.loadItemFromFile("src/main/java/org/bitbucket/mtriano/ItemCatalog.xml");
         catalog = loader.getItems();
-        System.out.println("loaded");
     }
 
     public ArrayList<Item> getCatalog() {

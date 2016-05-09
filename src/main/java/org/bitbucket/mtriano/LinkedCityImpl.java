@@ -26,5 +26,4 @@ public class LinkedCityImpl implements LinkedCity {
     public int getDistance() throws InvalidDataException {
         return cityDistance;
     }
-
 }
