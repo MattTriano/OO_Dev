@@ -47,8 +47,9 @@ public final class FacilityNetwork {
         Facility start = getFacility("Detroit, MI");
         Facility end = getFacility("San Francisco, CA");
         ShortestPath path = ShortestPathAllPairsImplFactory.CreateShortestPath(start, end);
-        path.mapPairs(start);
-        return null;
+        ArrayList<Facility> lowPath = path.findBestPath(start, end);
+
+        return lowPath;
     }
 
     public ArrayList<Facility> getLinkedFacilities(ArrayList<LinkedCity> links)
