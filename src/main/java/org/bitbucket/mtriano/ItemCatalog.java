@@ -46,4 +46,21 @@ public final class ItemCatalog {
         }
         return false;
     }
+
+    public void printCatalog() throws InvalidDataException {
+        System.out.println("Item Catalog:");
+        ArrayList<Item> catalog = getCatalog();
+        for (int i = 0; i < catalog.size(); i++) {
+            Item item = catalog.get(i);
+            String itemID = item.getID();
+            int cost = (int) item.getCost();
+            if ( (i+1)%4 == 0 ) {
+                System.out.printf("%-8s : $%-,10d%n", itemID, cost);
+            } else {
+                System.out.printf("%-8s : $%,-10d", itemID, cost);
+            }
+        }
+
+    }
+
 }

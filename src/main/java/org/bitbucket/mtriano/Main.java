@@ -17,12 +17,8 @@ public class Main {
             
             ArrayList<Facility> lowPath = net.getShortestPath("Boston, MA", "Phoenix, AZ");
 
-            for (Facility fac : lowPath) {
-                System.out.println(fac.getCityID() + " links to ");
-            }
-
-
-
+            net.facilityStatus("Detroit, MI");
+            cat.printCatalog();
 
 
         } catch (InvalidDataException e) {
