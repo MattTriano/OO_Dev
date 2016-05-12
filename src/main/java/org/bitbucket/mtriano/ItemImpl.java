@@ -1,7 +1,7 @@
 package org.bitbucket.mtriano;
 
 /**
- * Created by Matt on 4/27/2016.
+ * Implements the Item interface
  */
 public class ItemImpl implements Item {
 

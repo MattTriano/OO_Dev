@@ -1,7 +1,7 @@
 package org.bitbucket.mtriano;
 
 /**
- * Created by Matt on 5/3/2016.
+ * Factory for Stock objects
  */
 public class StockImplFactory {
 

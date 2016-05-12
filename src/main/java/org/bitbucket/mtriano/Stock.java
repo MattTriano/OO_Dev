@@ -1,7 +1,8 @@
 package org.bitbucket.mtriano;
 
 /**
- * Created by Matt on 5/3/2016.
+ * Interface for Stock objects
+ * Describes the inventory held at a facility
  */
 public interface Stock {
 

@@ -1,7 +1,7 @@
 package org.bitbucket.mtriano;
 
 /**
- * Created by Matt on 5/5/2016.
+ * Factory for ShortestPath objects
  */
 public class ShortestPathAllPairsImplFactory {
 

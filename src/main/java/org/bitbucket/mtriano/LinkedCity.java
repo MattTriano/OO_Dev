@@ -1,7 +1,8 @@
 package org.bitbucket.mtriano;
 
 /**
- * Created by Matt on 5/3/2016.
+ * Interface for LinkedCity objects
+ * These are the cities linked to a facility
  */
 public interface LinkedCity {
 

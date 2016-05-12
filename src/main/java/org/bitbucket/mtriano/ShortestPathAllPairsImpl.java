@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by Matt on 5/4/2016.
+ * Implements the ShortestPath interface
  */
 public class ShortestPathAllPairsImpl implements ShortestPath {
 

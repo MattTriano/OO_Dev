@@ -4,7 +4,7 @@ import javax.naming.LinkLoopException;
 import java.util.ArrayList;
 
 /**
- * Created by Matt on 5/7/2016.
+ * Implements a Pair object
  */
 public class PairImpl implements Pair {
 
@@ -13,9 +13,6 @@ public class PairImpl implements Pair {
     private Facility facilityB;
     private int distance;
 
-    /*
-
-     */
     public PairImpl(Facility facA, Facility facB) throws InvalidDataException {
         ArrayList<String> linkedIDs = new ArrayList<>();
         ArrayList<LinkedCity> links = facB.getLinkedCities();

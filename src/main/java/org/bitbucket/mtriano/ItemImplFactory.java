@@ -1,7 +1,7 @@
 package org.bitbucket.mtriano;
 
 /**
- * Created by Matt on 4/27/2016.
+ * Factory for Item objects
  */
 public class ItemImplFactory {
 

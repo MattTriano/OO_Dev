@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 /**
- * Created by Matt on 4/28/2016.
+ * Singleton for the ItemCatalog
  */
 public final class ItemCatalog {
 
@@ -14,6 +14,11 @@ public final class ItemCatalog {
     private static ArrayList<Item> catalog;
     private static ItemLoader loader = new ItemLoaderXML();
 
+    /*
+     * Access point for the singleton instance of the catalog
+     *
+     * @return  the singleton instance
+     */
     public static ItemCatalog getInstance() {
         if (instance == null) {
             synchronized (ItemCatalog.class) {
@@ -25,6 +30,9 @@ public final class ItemCatalog {
         return instance;
     }
 
+    /*
+     * loads the catalog from an XML file
+     */
     private ItemCatalog() {
         loader.loadItemFromFile("src/main/java/org/bitbucket/mtriano/ItemCatalog.xml");
         catalog = loader.getItems();
@@ -34,6 +42,13 @@ public final class ItemCatalog {
         return getInstance().catalog;
     }
 
+    /*
+     * Potentially useful later, it was stated that we'd need this, but I
+     * didn't use it yet.  Perhaps later I'll work it into error handling
+     *
+     * @param  itemID     ID of an item
+     * @return            boolean
+     */
     public boolean isItem(String itemID) throws InvalidDataException {
         if (itemID == null) {
             throw new InvalidDataException("ItemID not valid (it's null).");
@@ -47,6 +62,9 @@ public final class ItemCatalog {
         return false;
     }
 
+    /*
+     * Prints the formatted catalog output from the project specification
+     */
     public void printCatalog() throws InvalidDataException {
         System.out.println("Item Catalog:");
         ArrayList<Item> catalog = getCatalog();

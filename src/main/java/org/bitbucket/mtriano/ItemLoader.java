@@ -3,7 +3,7 @@ package org.bitbucket.mtriano;
 import java.util.ArrayList;
 
 /**
- * Created by Matt on 4/28/2016.
+ * Interface for an ItemLoader
  */
 public interface ItemLoader {
 

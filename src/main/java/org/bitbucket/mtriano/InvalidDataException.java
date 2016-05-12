@@ -1,7 +1,7 @@
 package org.bitbucket.mtriano;
 
 /**
- * Created by Matt on 4/27/2016.
+ * Exception Class for invalid data or parameters
  */
 public class InvalidDataException extends Exception {
 

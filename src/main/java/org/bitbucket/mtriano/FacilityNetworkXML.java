@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Matt on 4/26/2016.
- * Much was taken from the XMLReader that Prof. Hield provided
+ * The XMLReader that Prof. Hield provided was used as a jumping off point
  */
 public class FacilityNetworkXML implements FacilityLoader {
 

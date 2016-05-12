@@ -1,7 +1,7 @@
 package org.bitbucket.mtriano;
 
 /**
- * Created by Matt on 5/7/2016.
+ * Factory for Pair objects
  */
 public class PairImplFactory {
 

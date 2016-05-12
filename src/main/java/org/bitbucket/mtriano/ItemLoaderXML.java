@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * Created by Matt on 5/3/2016.
+ * The XMLReader that Prof. Hield provided was used as a jumping off point
  */
 public class ItemLoaderXML implements ItemLoader {
 

@@ -3,7 +3,7 @@ package org.bitbucket.mtriano;
 import java.util.ArrayList;
 
 /**
- * Created by Matt on 5/3/2016.
+ * Facility Loader Interface
  */
 public interface FacilityLoader {
 

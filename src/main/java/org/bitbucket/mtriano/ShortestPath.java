@@ -3,7 +3,7 @@ package org.bitbucket.mtriano;
 import java.util.ArrayList;
 
 /**
- * Created by Matt on 5/4/2016.
+ * Interface for ShortestPath objects
  */
 public interface ShortestPath {
 
