@@ -15,6 +15,7 @@ public interface ShortestPath {
     void findPath(Facility start, Facility end, ArrayList<Facility> pathList)
             throws InvalidDataException ;
     ArrayList<Facility> getLowPath() throws InvalidDataException;
-    Double getTravelTime(int speed) throws InvalidDataException;
+    Double getTravelTime(ArrayList<Facility> path, int speed)
+            throws InvalidDataException;
 
 }

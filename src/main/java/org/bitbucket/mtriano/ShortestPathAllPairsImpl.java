@@ -18,6 +18,12 @@ public class ShortestPathAllPairsImpl implements ShortestPath {
     private Facility startFacility;
     private Facility endFacility;
 
+    /*
+     * Implements the ShortestPath interface with the AllPairs algorithm
+     *
+     * @param  origin          The origin Facility
+     * @param  destination     The destination Facility
+     */
     public ShortestPathAllPairsImpl(Facility origin, Facility destination)
             throws InvalidDataException {
         if (origin == null) {
@@ -31,25 +37,11 @@ public class ShortestPathAllPairsImpl implements ShortestPath {
         endFacility = destination;
     }
 
-
-    //todo delete this if the new thing works
-//    public void mapPairs(Facility init) throws InvalidDataException {
-//        seen.add(init);
-//        ArrayList<Facility> linkedFacs = FacilityNetwork.getInstance().
-//                getLinkedFacilities(init.getLinkedCities());
-//        for (Facility neighbor : linkedFacs) {
-//            ArrayList<Facility> pair = new ArrayList<>();
-//            pair.add(init);
-//            pair.add(neighbor);
-//            pairs.put(pair, linkDistance(init, neighbor));
-//            if (!seen.contains(neighbor)) {
-//                mapPairs(neighbor);
-//            }
-//        }
-//    }
-
-    /* This method loads all possible connections between adjacent cities in the network
-    * Param: Facility init, the initial city in an analysis*/
+    /*
+     * This method loads all possible connections between adjacent cities in the network
+     *
+     * @param  init     the initial city in a search
+     */
     public void mapPairs(Facility init) throws InvalidDataException {
         seen.add(init);
         ArrayList<Facility> linkedFacs = FacilityNetwork.getInstance().
@@ -63,7 +55,13 @@ public class ShortestPathAllPairsImpl implements ShortestPath {
         }
     }
 
-    // Gets the distance between 2 facilities
+    /*
+     * Gets the distance between 2 directly linked facilities
+     *
+     * @param  facilityA     the first link in the pair
+     * @param  facilityB     the second link in the pair
+     * @return               the distance between the facilities
+     */
     private int linkDistance(Facility facilityA, Facility facilityB) throws InvalidDataException {
         int distance = -1;
         String facilityBID = facilityB.getCityID();
@@ -75,7 +73,13 @@ public class ShortestPathAllPairsImpl implements ShortestPath {
         return distance;
     }
 
-    // todo finish this up
+    /*
+     * the findPath method described on the AllPairs example provided by Prof Hield
+     *
+     * @param  start        start Facility
+     * @param  end          end Facility
+     * @param  pathList     list of facilities already on the path from start
+     */
     public void findPath(Facility start, Facility end, ArrayList<Facility> pathList)
             throws InvalidDataException {
         if (start.equals(end)) {
@@ -103,6 +107,12 @@ public class ShortestPathAllPairsImpl implements ShortestPath {
         }
     }
 
+    /*
+     * returns the total length of a path
+     *
+     * @param  pathList     list of Facilities on a path
+     * @return              the sum of the distances between Facilities on the path
+     */
     private int pathDistance(ArrayList<Facility> pathList) throws InvalidDataException {
         if (pathList == null) {
             throw new InvalidDataException("Null pathList passed to pathDistance()");
@@ -114,6 +124,12 @@ public class ShortestPathAllPairsImpl implements ShortestPath {
         return totalDistance;
     }
 
+    /*
+     * the findBestPath method described on the AllPairs example provided by Prof Hield
+     *
+     * @param  start        start Facility
+     * @param  end          end Facility
+     */
     public ArrayList<Facility> findBestPath(Facility start, Facility end) throws InvalidDataException {
         mapPairs(start);
         seen = new HashSet<>();
@@ -125,10 +141,19 @@ public class ShortestPathAllPairsImpl implements ShortestPath {
         return lowPath;
     }
 
+    /*
+     * Getter for lowPath for this ShortestPath object
+     */
     public ArrayList<Facility> getLowPath() throws InvalidDataException {
         return lowPath;
     }
 
+    /*
+     * gets the path length for the lowest path
+     *
+     * @param  path     makes sure a path exists to insure a lowPath has been set
+     * @return          length of the shortest path
+     */
     public Integer getPathDistance(ArrayList<Facility> path)
             throws InvalidDataException {
         if (path == null) {
@@ -137,10 +162,17 @@ public class ShortestPathAllPairsImpl implements ShortestPath {
         return pathDistance(lowPath);
     }
 
-    public Double getTravelTime(int speed) throws InvalidDataException {
+    /*
+     * Calculates the travel time for a given path
+     *
+     * @param  path     The path to be traveled
+     * @param  speed    The speed at which the transporter travels
+     * @return          number of days needed to travel that path
+     */
+    public Double getTravelTime(ArrayList<Facility> path, int speed) throws InvalidDataException {
         if (speed < 0) {
             throw new InvalidDataException("Negative speed entered! Illegal!");
         }
-        return (double) getPathDistance(lowPath)/speed;
+        return (double) getPathDistance(path)/ (8* speed);
     }
 }

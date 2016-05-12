@@ -3,7 +3,7 @@ package org.bitbucket.mtriano;
 import java.util.ArrayList;
 
 /**
- * Created by Matt on 5/3/2016.
+ * Factory for a Facility object
  */
 public class FacilityImplFactory {
 

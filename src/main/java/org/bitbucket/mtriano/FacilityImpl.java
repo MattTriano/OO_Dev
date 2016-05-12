@@ -3,7 +3,7 @@ package org.bitbucket.mtriano;
 import java.util.ArrayList;
 
 /**
- * Created by Matt on 5/3/2016.
+ * Implements the Facility interface
  */
 public class FacilityImpl implements Facility {
 
@@ -13,6 +13,9 @@ public class FacilityImpl implements Facility {
     private ArrayList<Stock> cityInventory;         // local inventory
     private ArrayList<LinkedCity> linkedCities;     // 1st degree linked cities
 
+    /*
+     * Checks inputs for a Facility object
+     */
     public FacilityImpl(String id, int rate, int cost, ArrayList<Stock> inventory,
                         ArrayList<LinkedCity> links) throws InvalidDataException {
         if (id == null) {
@@ -56,19 +59,5 @@ public class FacilityImpl implements Facility {
     public ArrayList<LinkedCity> getLinkedCities() throws InvalidDataException {
         return linkedCities;
     }
-
-    //todo delete this
-//    public ArrayList<Facility> getLinkedFacilities() throws InvalidDataException {
-//        ArrayList<Facility> network = FacilityNetwork.getInstance().getNetwork();
-//        ArrayList<Facility> linkedFacilities = new ArrayList<>();
-//        for (LinkedCity city : linkedCities) {
-//            for (Facility facility : network) {
-//                if (facility.getCityID().equals(city.getCityID())) {
-//                    linkedFacilities.add(facility);
-//                }
-//            }
-//        }
-//        return linkedFacilities;
-//    }
 
 }

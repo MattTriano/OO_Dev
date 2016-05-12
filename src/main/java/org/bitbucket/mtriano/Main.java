@@ -12,13 +12,12 @@ public class Main {
             ArrayList<Item> catalog = ItemCatalog.getInstance().getCatalog();
 
             FacilityNetwork net = FacilityNetwork.getInstance();
-            ArrayList<Facility> network = FacilityNetwork.getInstance().getNetwork();
+//            ArrayList<Facility> network = FacilityNetwork.getInstance().getNetwork();
 
-            
-            ArrayList<Facility> lowPath = net.getShortestPath("Boston, MA", "Phoenix, AZ");
 
             net.facilityStatus("Detroit, MI");
             cat.printCatalog();
+            net.shortestPathTest();
 
 
         } catch (InvalidDataException e) {

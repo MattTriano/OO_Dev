@@ -60,7 +60,6 @@ public final class ItemCatalog {
                 System.out.printf("%-8s : $%,-10d", itemID, cost);
             }
         }
-
     }
 
 }
