@@ -1,4 +1,8 @@
-package org.bitbucket.mtriano;
+package org.bitbucket.mtriano.Facility;
+
+import org.bitbucket.mtriano.InvalidDataException;
+import org.bitbucket.mtriano.LinkedCity.LinkedCity;
+import org.bitbucket.mtriano.Stock;
 
 import java.util.ArrayList;
 

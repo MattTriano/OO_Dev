@@ -1,8 +1,8 @@
 package org.bitbucket.mtriano;
 
+import org.bitbucket.mtriano.Item.Item;
+
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Main {
 

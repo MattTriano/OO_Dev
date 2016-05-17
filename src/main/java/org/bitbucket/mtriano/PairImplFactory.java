@@ -1,5 +1,7 @@
 package org.bitbucket.mtriano;
 
+import org.bitbucket.mtriano.Facility.Facility;
+
 /**
  * Factory for Pair objects
  */

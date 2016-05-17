@@ -1,5 +1,9 @@
 package org.bitbucket.mtriano;
 
+import org.bitbucket.mtriano.Facility.Facility;
+import org.bitbucket.mtriano.Facility.FacilityImplFactory;
+import org.bitbucket.mtriano.LinkedCity.LinkedCity;
+import org.bitbucket.mtriano.LinkedCity.LinkedCityImplFactory;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 

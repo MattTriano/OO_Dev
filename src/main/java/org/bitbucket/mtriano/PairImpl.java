@@ -1,6 +1,8 @@
 package org.bitbucket.mtriano;
 
-import javax.naming.LinkLoopException;
+import org.bitbucket.mtriano.Facility.Facility;
+import org.bitbucket.mtriano.LinkedCity.LinkedCity;
+
 import java.util.ArrayList;
 
 /**

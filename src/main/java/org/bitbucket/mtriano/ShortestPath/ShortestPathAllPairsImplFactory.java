@@ -1,4 +1,7 @@
-package org.bitbucket.mtriano;
+package org.bitbucket.mtriano.ShortestPath;
+
+import org.bitbucket.mtriano.Facility.Facility;
+import org.bitbucket.mtriano.InvalidDataException;
 
 /**
  * Factory for ShortestPath objects

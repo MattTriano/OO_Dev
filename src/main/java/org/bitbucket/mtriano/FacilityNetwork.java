@@ -1,5 +1,10 @@
 package org.bitbucket.mtriano;
 
+import org.bitbucket.mtriano.Facility.Facility;
+import org.bitbucket.mtriano.LinkedCity.LinkedCity;
+import org.bitbucket.mtriano.ShortestPath.ShortestPath;
+import org.bitbucket.mtriano.ShortestPath.ShortestPathAllPairsImplFactory;
+
 import java.util.ArrayList;
 
 /**
@@ -32,7 +37,7 @@ public final class FacilityNetwork {
      * Loads the network
      */
     private FacilityNetwork() {
-        loader.loadNetworkFromFile("src/main/java/org/bitbucket/mtriano/" +
+        loader.loadNetworkFromFile("src/main/java/org/bitbucket/mtriano/Data/" +
                 "FacilityNetwork.xml");
         network = loader.getFacilities();
     }

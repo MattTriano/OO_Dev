@@ -1,5 +1,8 @@
 package org.bitbucket.mtriano;
 
+import org.bitbucket.mtriano.Item.Item;
+import org.bitbucket.mtriano.Item.ItemImplFactory;
+import org.bitbucket.mtriano.Item.ItemLoader;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
@@ -16,11 +19,11 @@ import java.util.ArrayList;
 public class ItemLoaderXML implements ItemLoader {
 
     ArrayList<Item> itemCatalog = new ArrayList<>();
-    String defaultFilepath = "src/main/java/org/bitbucket/mtriano/ItemCatalog.xml";
+    String defaultFilepath = "src/main/java/org/bitbucket/mtriano/Data/ItemCatalog.xml";
 
     public void loadItemFromFile(String filePath) {
         try {
-            //String filePath = "src/main/java/org/bitbucket/mtriano/ItemCatalog.xml";
+            //String filePath = "src/main/java/org/bitbucket/mtriano/Data/ItemCatalog.xml";
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
 

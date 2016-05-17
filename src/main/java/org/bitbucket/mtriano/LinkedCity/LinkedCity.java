@@ -1,4 +1,6 @@
-package org.bitbucket.mtriano;
+package org.bitbucket.mtriano.LinkedCity;
+
+import org.bitbucket.mtriano.InvalidDataException;
 
 /**
  * Interface for LinkedCity objects

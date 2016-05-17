@@ -1,9 +1,9 @@
 package org.bitbucket.mtriano;
 
+import org.bitbucket.mtriano.Item.Item;
+import org.bitbucket.mtriano.Item.ItemLoader;
+
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.stream.Stream;
 
 /**
  * Singleton for the ItemCatalog
@@ -34,7 +34,7 @@ public final class ItemCatalog {
      * loads the catalog from an XML file
      */
     private ItemCatalog() {
-        loader.loadItemFromFile("src/main/java/org/bitbucket/mtriano/ItemCatalog.xml");
+        loader.loadItemFromFile("src/main/java/org/bitbucket/mtriano/Data/ItemCatalog.xml");
         catalog = loader.getItems();
     }
 

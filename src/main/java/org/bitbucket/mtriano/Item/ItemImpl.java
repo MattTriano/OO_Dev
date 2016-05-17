@@ -1,4 +1,7 @@
-package org.bitbucket.mtriano;
+package org.bitbucket.mtriano.Item;
+
+import org.bitbucket.mtriano.InvalidDataException;
+import org.bitbucket.mtriano.Item.Item;
 
 /**
  * Implements the Item interface
