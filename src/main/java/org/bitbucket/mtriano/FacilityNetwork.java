@@ -1,6 +1,8 @@
 package org.bitbucket.mtriano;
 
 import org.bitbucket.mtriano.Facility.Facility;
+import org.bitbucket.mtriano.Inventory.Inventory;
+import org.bitbucket.mtriano.Inventory.Stock;
 import org.bitbucket.mtriano.LinkedCity.LinkedCity;
 import org.bitbucket.mtriano.ShortestPath.ShortestPath;
 import org.bitbucket.mtriano.ShortestPath.ShortestPathAllPairsImplFactory;
@@ -17,9 +19,8 @@ public final class FacilityNetwork {
     private static ArrayList<Facility> network;
     private static FacilityLoader loader = new FacilityNetworkXML();
 
-    /*
-     * Access point for the singleton instance of the network
-     *
+    /* Access point for the singleton instance of the network
+    
      * @return  the singleton instance
      */
     public static FacilityNetwork getInstance() {
@@ -33,8 +34,7 @@ public final class FacilityNetwork {
         return instance;
     }
 
-    /*
-     * Loads the network
+    /* Loads the network
      */
     private FacilityNetwork() {
         loader.loadNetworkFromFile("src/main/java/org/bitbucket/mtriano/Data/" +
@@ -42,17 +42,15 @@ public final class FacilityNetwork {
         network = loader.getFacilities();
     }
 
-    /*
-     * Controls access to the network
-     *
+    /* Controls access to the network
+
      * @return  the network instance
      */
     public ArrayList<Facility> getNetwork() {
         return getInstance().network;
     }
 
-    /*
-     * Wrapper method to allow a String of the cityID to print
+    /*  Wrapper method to allow a String of the cityID to print
      *  the formatted facility status output from the project specification
      *
      *  @param  cityID     The cityID of the Facility of interest
@@ -61,9 +59,8 @@ public final class FacilityNetwork {
         facilityStatus(getFacility(cityID));
     }
 
-    /*
-     * Prints the formatted facility status output from the project specification
-     *
+    /* Prints the formatted facility status output from the project specification
+
      * @param  facility     The Facility object we want the status of
      */
     public void facilityStatus(Facility facility) throws InvalidDataException {
@@ -71,7 +68,7 @@ public final class FacilityNetwork {
         int rate = facility.getRate();
         int cost = facility.getCost();
         ArrayList<LinkedCity> linkedCities = facility.getLinkedCities();
-        ArrayList<Stock> inventory = facility.getInventory();
+        Inventory inventory = facility.getInventory();
 
         printCityID(cityID);
         System.out.println("Rate per Day: " + rate);
@@ -82,9 +79,8 @@ public final class FacilityNetwork {
         printSchedule(rate);
     }
 
-    /*
-     * Prints the cityID with an equal length of underscores
-     *
+    /* Prints the cityID with an equal length of underscores
+
      * @param  cityID     The cityID to be printed
      */
     private void printCityID(String cityID) throws InvalidDataException {
@@ -96,9 +92,8 @@ public final class FacilityNetwork {
         System.out.print("\n");
     }
 
-    /*
-     * A helper method that replicates the single decimal point format
-     * in the problem specification
+    /* A helper method that replicates the single decimal point format
+     *     in the problem specification
      *
      * @param   value          The value to be rounded
      * @param   decimalPlaces  The number of decimal places to round to
@@ -109,9 +104,8 @@ public final class FacilityNetwork {
         return (double) Math.round(value * scalingFactor) / scalingFactor;
     }
 
-    /*
-     * Prints a list of the cities linked to a facility and the time
-     * needed to transport material to those cities
+    /* Prints a list of the cities linked to a facility and the time
+     *     needed to transport material to those cities
      *
      * @param  linkedCities     Takes an ArrayList of the cities
      *                           linked to a Facility
@@ -126,9 +120,8 @@ public final class FacilityNetwork {
         System.out.println(" ");
     }
 
-    /*
-     * Prints the production schedule for a facility
-     *
+    /* Prints the production schedule for a facility
+
      * @param  rate     The number of items a facility can produce in a day
      */
     private void printSchedule(int rate) throws InvalidDataException {
@@ -146,24 +139,23 @@ public final class FacilityNetwork {
         System.out.println("-----------------------------------------------------------------------------");
     }
 
-    /*
-     * Prints the inventory at a facility
-     *
+    /* Prints the inventory at a facility
+
      * @param  inventory     An ArrayList of the stock in inventory at a facility
      */
-    private void printInventory(ArrayList<Stock> inventory)
+    private void printInventory(Inventory inventory)
             throws InvalidDataException {
         System.out.println("Active Inventory:");
         System.out.println("    Item ID     Quantity");
-        for (Stock item : inventory) {
+        ArrayList<Stock> stockOnHand = inventory.getInventory();
+        for (Stock item : stockOnHand) {
             System.out.printf("    %-11s %-9d %n", item.getID(), item.getQuantity());
         }
         System.out.println(" ");
     }
 
-    /*
-     * Wrapper method to use Strings of the IDs to print the shortest path
-     *
+    /* Wrapper method to use Strings of the IDs to print the shortest path
+
      * @param  start  The ID of the first Facility in the path
      * @param  end    The ID of the last Facility in the path
      */
@@ -173,9 +165,8 @@ public final class FacilityNetwork {
         printShortestPath(startFac, endFac);
     }
 
-    /*
-     * Prints the formatted output for a shortest path between two facilities
-     *
+    /* Prints the formatted output for a shortest path between two facilities
+
      * @param  start  The ID of the first Facility in the path
      * @param  end    The ID of the last Facility in the path
      */
@@ -200,8 +191,7 @@ public final class FacilityNetwork {
                 + travelTime + " days");
     }
 
-    /*
-     * Tester method that produces the outputs required
+    /* Tester method that produces the outputs required
      * by the problem specification
      */
     public void shortestPathTest() throws InvalidDataException {
@@ -238,9 +228,8 @@ public final class FacilityNetwork {
         }
     }
 
-    /*
-     * This looks up a facility by its cityID
-     *
+    /* This looks up a facility by its cityID
+
      * @param   cityID      The ID of the desired facility
      * @return              The Facility object with that ID
      */
@@ -257,8 +246,7 @@ public final class FacilityNetwork {
         return null;
     }
 
-    /*
-     * This is a wrapper method that returns the shortest path given
+    /* This is a wrapper method that returns the shortest path given
      * strings of the start and end facilities
      *
      * @param  start  The ID of the first Facility in the path
@@ -274,9 +262,8 @@ public final class FacilityNetwork {
         return lowPath;
     }
 
-    /*
-     * returns the shortest path given the start and end facilities
-     *
+    /* returns the shortest path given the start and end facilities
+
      * @param  start  The ID of the first Facility in the path
      * @param  end    The ID of the last Facility in the path
      * @return        Returns an ordered ArrayList of the facilities
@@ -290,9 +277,7 @@ public final class FacilityNetwork {
         return path.getLowPath();
     }
 
-    /*
-     * Produces a list of the IDs of all facilities loaded into the network
-     *
+    /* Produces a list of the IDs of all facilities loaded into the network
      * @return      An ArrayList of Strings of the IDs of facilities in the network
      */
     public ArrayList<String> facilityList() throws InvalidDataException {
@@ -304,8 +289,7 @@ public final class FacilityNetwork {
         return facList;
     }
 
-    /*
-     * This is a helper method intended to convert the LinkedCity
+    /* This is a helper method intended to convert the LinkedCity
      * ArrayLists from Facility objects into ArrayLists of Facilities.
      *
      * @param   links     An ArrayList of LinkedCity objects

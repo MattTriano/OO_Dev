@@ -18,6 +18,7 @@ public class Main {
             net.facilityStatus("Detroit, MI");
             cat.printCatalog();
             net.shortestPathTest();
+            net.getFacility("Chicago, IL").getSchedule().printSchedule();
 
 
         } catch (InvalidDataException e) {

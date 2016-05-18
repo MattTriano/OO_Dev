@@ -1,11 +1,13 @@
-package org.bitbucket.mtriano;
+package org.bitbucket.mtriano.Facility;
+
+import org.bitbucket.mtriano.InvalidDataException;
 
 import java.util.ArrayList;
 
 /**
  * Created by Matt on 5/17/2016.
  */
-public class ScheduleImpl {
+public class ScheduleImpl implements Schedule{
 
     private ArrayList<Integer> schedule;
     private Integer rate;
@@ -20,18 +22,21 @@ public class ScheduleImpl {
             throw new InvalidDataException("Invalid number of days passed to ScheduleImpl");
         }
         schedule = new ArrayList<>();
+        rate = localRate;
         for (int i = 0; i < plannedDays; i++) {
             schedule.add(rate);
         }
-        rate = localRate;
         days = plannedDays;
     }
 
-    public void scheduleProduction(Integer quantity) throws InvalidDataException {
+    public void scheduleProduction(Integer startDay, Integer quantity) throws InvalidDataException {
         if (quantity < 0) {
             throw new InvalidDataException("Invalid quantity passed to scheduleProduction");
         }
-        for (int i = 0; i < schedule.size(); i++) {
+        if (startDay < 0 | startDay > days) {
+            throw new InvalidDataException("Invalid startDay passed to scheduleProduction");
+        }
+        for (int i = startDay-1; i < schedule.size(); i++) {
             Integer capacityToday = schedule.get(i);
             if (quantity == 0) {
                 break;
@@ -52,6 +57,7 @@ public class ScheduleImpl {
     }
 
     public void printSchedule() {
+        System.out.print("Day:        ");
         for (int i = 1; i <= days; i++) {
             System.out.printf("%3d", i);
         }

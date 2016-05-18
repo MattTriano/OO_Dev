@@ -1,4 +1,6 @@
-package org.bitbucket.mtriano;
+package org.bitbucket.mtriano.Inventory;
+
+import org.bitbucket.mtriano.InvalidDataException;
 
 /**
  * Implements the Stock interface

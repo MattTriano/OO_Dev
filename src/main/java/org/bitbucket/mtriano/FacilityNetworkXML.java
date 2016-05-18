@@ -2,6 +2,12 @@ package org.bitbucket.mtriano;
 
 import org.bitbucket.mtriano.Facility.Facility;
 import org.bitbucket.mtriano.Facility.FacilityImplFactory;
+import org.bitbucket.mtriano.Facility.Schedule;
+import org.bitbucket.mtriano.Facility.ScheduleImplFactory;
+import org.bitbucket.mtriano.Inventory.Inventory;
+import org.bitbucket.mtriano.Inventory.InventoryImplFactory;
+import org.bitbucket.mtriano.Inventory.Stock;
+import org.bitbucket.mtriano.Inventory.StockImplFactory;
 import org.bitbucket.mtriano.LinkedCity.LinkedCity;
 import org.bitbucket.mtriano.LinkedCity.LinkedCityImplFactory;
 import org.w3c.dom.*;
@@ -55,7 +61,7 @@ public class FacilityNetworkXML implements FacilityLoader {
                         .item(0).getTextContent().replace("$", ""));
 
                 // Now I want to make a list of the stock in inventory in this city
-                ArrayList<Stock> inventory = new ArrayList<>();
+                ArrayList<Stock> inventoryStock = new ArrayList<>();
                 NodeList stockList = elem.getElementsByTagName("Item");
                 for (int j = 0; j < stockList.getLength(); j++) {
                     if (stockList.item(j).getNodeType() == Node.TEXT_NODE) {
@@ -73,7 +79,7 @@ public class FacilityNetworkXML implements FacilityLoader {
                             .getTextContent();
                     int itemQty = Integer.parseInt(elemj.getElementsByTagName("Quantity")
                             .item(0).getTextContent());
-                    inventory.add(StockImplFactory.createStock(itemID, itemQty));
+                    inventoryStock.add(StockImplFactory.createStock(itemID, itemQty));
                 }
 
                 // Now I want to make a list of all of the cities that are
@@ -101,8 +107,10 @@ public class FacilityNetworkXML implements FacilityLoader {
                             cityDistance));
                 }
 
+                Inventory inventory = InventoryImplFactory.createInventory(inventoryStock);
+                Schedule schedule = ScheduleImplFactory.createSchedule(20, rate);
                 Facility local = FacilityImplFactory.createFacility(city, rate,
-                        cost, inventory, linkedCities);
+                        cost, inventory, linkedCities, schedule);
                 facilityNetwork.add(local);
             }
         } catch (ParserConfigurationException | SAXException | IOException |

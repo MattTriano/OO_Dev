@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Orders>
+    <Order OrderID="TO-001">
+        <StartTime>1</StartTime>
+        <Destination>Miami, FL</Destination>
+        <OrderItem>
+            <ItemID>ABC123</ItemID>
+            <ItemQTY>180</ItemQTY>
+        </OrderItem>
+        <OrderItem>
+            <ItemID>CR2032</ItemID>
+            <ItemQTY>320</ItemQTY>
+        </OrderItem>
+    </Order>
+    <Order OrderID="TO-002">
+        <StartTime>1</StartTime>
+        <Destination>Boston, MA</Destination>
+        <OrderItem>
+            <ItemID>PL132-c</ItemID>
+            <ItemQTY>5</ItemQTY>
+        </OrderItem>
+        <OrderItem>
+            <ItemID>XLK200B</ItemID>
+            <ItemQTY>120</ItemQTY>
+        </OrderItem>
+    </Order>
+    <Order OrderID="TO-003">
+        <StartTime>4</StartTime>
+        <Destination>Seattle, WA</Destination>
+        <OrderItem>
+            <ItemID>XTP202</ItemID>
+            <ItemQTY>100</ItemQTY>
+        </OrderItem>
+        <OrderItem>
+            <ItemID>E241i</ItemID>
+            <ItemQTY>105</ItemQTY>
+        </OrderItem>
+    </Order>
+    <Order OrderID="TO-004">
+        <StartTime>10</StartTime>
+        <Destination>Phoenix, AZ</Destination>
+        <OrderItem>
+            <ItemID>CR2032</ItemID>
+            <ItemQTY>200</ItemQTY>
+        </OrderItem>
+        <OrderItem>
+            <ItemID>SR71-D</ItemID>
+            <ItemQTY>85</ItemQTY>
+        </OrderItem>
+    </Order>
+    <Order OrderID="TO-005">
+        <StartTime>7</StartTime>
+        <Destination>Chicago, IL</Destination>
+        <OrderItem>
+            <ItemID>XLK200B</ItemID>
+            <ItemQTY>120</ItemQTY>
+        </OrderItem>
+        <OrderItem>
+            <ItemID>RX100-3</ItemID>
+            <ItemQTY>200</ItemQTY>
+        </OrderItem>
+    </Order>
+    <Order OrderID="TO-006">
+        <StartTime>8</StartTime>
+        <Destination>Denver, CO</Destination>
+        <OrderItem>
+            <ItemID>CT1928</ItemID>
+            <ItemQTY>120</ItemQTY>
+        </OrderItem>
+    </Order>
+</Orders>
