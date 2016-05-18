@@ -1,6 +1,7 @@
-package org.bitbucket.mtriano;
+package org.bitbucket.mtriano.ShortestPath;
 
 import org.bitbucket.mtriano.Facility.Facility;
+import org.bitbucket.mtriano.InvalidDataException;
 import org.bitbucket.mtriano.LinkedCity.LinkedCity;
 
 import java.util.ArrayList;

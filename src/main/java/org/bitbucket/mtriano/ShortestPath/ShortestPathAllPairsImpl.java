@@ -4,8 +4,6 @@ import org.bitbucket.mtriano.Facility.Facility;
 import org.bitbucket.mtriano.FacilityNetwork;
 import org.bitbucket.mtriano.InvalidDataException;
 import org.bitbucket.mtriano.LinkedCity.LinkedCity;
-import org.bitbucket.mtriano.Pair;
-import org.bitbucket.mtriano.PairImplFactory;
 
 import java.util.ArrayList;
 import java.util.HashMap;

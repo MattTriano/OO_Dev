@@ -20,7 +20,7 @@ public final class FacilityNetwork {
     private static FacilityLoader loader = new FacilityNetworkXML();
 
     /* Access point for the singleton instance of the network
-    
+
      * @return  the singleton instance
      */
     public static FacilityNetwork getInstance() {
