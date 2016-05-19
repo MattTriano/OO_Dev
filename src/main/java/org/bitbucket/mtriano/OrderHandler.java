@@ -1,6 +1,7 @@
 package org.bitbucket.mtriano;
 
 import org.bitbucket.mtriano.Facility.Facility;
+import org.bitbucket.mtriano.Order.Line;
 import org.bitbucket.mtriano.Order.Order;
 
 import java.util.ArrayList;
@@ -36,8 +37,21 @@ public final class OrderHandler {
         return getInstance().orderList;
     }
 
-    public void processOrder(){
-        int i = 0;
+    public void processOrder(Order order) throws InvalidDataException{
+        ArrayList<Line> orderLines = order.getOrderLines();
+
+    }
+
+    public void processLine(Order order, Line line)
+            throws InvalidDataException {
+        ArrayList<Facility> sources = itemSource(order.getDestination(),
+                line.getLineID());
+        Integer itemQty = line.getLineQty();
+        if (!sources.isEmpty()) {
+            for (Facility facility : sources) {
+
+            }
+        }
     }
 
     /* Makes a list of all facilities (except for the destination facility)
@@ -52,7 +66,7 @@ public final class OrderHandler {
         ArrayList<Facility> network = net.getNetwork();
         ArrayList<Facility> sources = new ArrayList<>();
         for (Facility facility : network) {
-            if (facility.hasItem(itemID)) {
+            if (facility.hasItem(itemID) && facility.itemInStock(itemID)) {
                 sources.add(facility);
             }
         }

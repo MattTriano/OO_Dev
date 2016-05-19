@@ -50,6 +50,10 @@ public final class FacilityNetwork {
         return getInstance().network;
     }
 
+    public boolean isValidFacility(Facility facility) throws InvalidDataException {
+        return network.contains(facility);
+    }
+
     /*  Wrapper method to allow a String of the cityID to print
      *  the formatted facility status output from the project specification
      *

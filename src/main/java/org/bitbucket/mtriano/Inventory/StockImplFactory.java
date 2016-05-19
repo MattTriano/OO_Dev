@@ -7,7 +7,7 @@ import org.bitbucket.mtriano.InvalidDataException;
  */
 public class StockImplFactory {
 
-    public static Stock createStock(String itemID, int itemQuantity)
+    public static Stock createStock(String itemID, Integer itemQuantity)
             throws InvalidDataException {
         return new StockImpl(itemID, itemQuantity);
     }

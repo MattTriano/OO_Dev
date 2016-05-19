@@ -10,7 +10,7 @@ public class StockImpl implements Stock {
     private String itemID;
     private int itemQuantity;
 
-    public StockImpl(String id, int qty) throws InvalidDataException {
+    public StockImpl(String id, Integer qty) throws InvalidDataException {
         if (id == null) {
             throw new InvalidDataException("ItemID not valid (null value entered)");
         }
@@ -25,7 +25,7 @@ public class StockImpl implements Stock {
         return itemID;
     }
 
-    public int getQuantity() throws InvalidDataException {
+    public Integer getQuantity() throws InvalidDataException {
         return itemQuantity;
     }
 }

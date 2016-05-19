@@ -9,6 +9,6 @@ import org.bitbucket.mtriano.InvalidDataException;
 public interface Stock {
 
     String getID() throws InvalidDataException;
-    int getQuantity() throws InvalidDataException;
+    Integer getQuantity() throws InvalidDataException;
 
 }

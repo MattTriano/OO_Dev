@@ -17,5 +17,6 @@ public interface Facility {
     Inventory getInventory() throws InvalidDataException;
     ArrayList<LinkedCity> getLinkedCities() throws InvalidDataException;
     boolean hasItem(String itemID) throws InvalidDataException;
+    boolean itemInStock(String itemID) throws InvalidDataException;
     Schedule getSchedule() throws InvalidDataException;
 }

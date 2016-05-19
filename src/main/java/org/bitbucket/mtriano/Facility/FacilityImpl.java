@@ -80,6 +80,15 @@ public class FacilityImpl implements Facility {
         return cityInventory.hasItem(itemID);
     }
 
+    public boolean itemInStock(String itemID) throws InvalidDataException {
+        if (!ItemCatalog.getInstance().isItem(itemID)) {
+            throw new InvalidDataException("Invalid item ID passed to " +
+                    "FacilityImpl/hasItem");
+        }
+        return cityInventory.itemInStock(itemID);
+    }
+
+
     public Schedule getSchedule() throws InvalidDataException {
         return schedule;
     }
