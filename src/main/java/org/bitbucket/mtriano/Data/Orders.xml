@@ -6,11 +6,11 @@
         <Destination>Miami, FL</Destination>
         <OrderItem>
             <ItemID>ABC123</ItemID>
-            <ItemQTY>180</ItemQTY>
+            <ItemQty>180</ItemQty>
         </OrderItem>
         <OrderItem>
             <ItemID>CR2032</ItemID>
-            <ItemQTY>320</ItemQTY>
+            <ItemQty>320</ItemQty>
         </OrderItem>
     </Order>
     <Order OrderID="TO-002">
@@ -18,11 +18,11 @@
         <Destination>Boston, MA</Destination>
         <OrderItem>
             <ItemID>PL132-c</ItemID>
-            <ItemQTY>5</ItemQTY>
+            <ItemQty>5</ItemQty>
         </OrderItem>
         <OrderItem>
             <ItemID>XLK200B</ItemID>
-            <ItemQTY>120</ItemQTY>
+            <ItemQty>120</ItemQty>
         </OrderItem>
     </Order>
     <Order OrderID="TO-003">
@@ -30,11 +30,11 @@
         <Destination>Seattle, WA</Destination>
         <OrderItem>
             <ItemID>XTP202</ItemID>
-            <ItemQTY>100</ItemQTY>
+            <ItemQty>100</ItemQty>
         </OrderItem>
         <OrderItem>
             <ItemID>E241i</ItemID>
-            <ItemQTY>105</ItemQTY>
+            <ItemQty>105</ItemQty>
         </OrderItem>
     </Order>
     <Order OrderID="TO-004">
@@ -42,11 +42,11 @@
         <Destination>Phoenix, AZ</Destination>
         <OrderItem>
             <ItemID>CR2032</ItemID>
-            <ItemQTY>200</ItemQTY>
+            <ItemQty>200</ItemQty>
         </OrderItem>
         <OrderItem>
             <ItemID>SR71-D</ItemID>
-            <ItemQTY>85</ItemQTY>
+            <ItemQty>85</ItemQty>
         </OrderItem>
     </Order>
     <Order OrderID="TO-005">
@@ -54,11 +54,11 @@
         <Destination>Chicago, IL</Destination>
         <OrderItem>
             <ItemID>XLK200B</ItemID>
-            <ItemQTY>120</ItemQTY>
+            <ItemQty>120</ItemQty>
         </OrderItem>
         <OrderItem>
             <ItemID>RX100-3</ItemID>
-            <ItemQTY>200</ItemQTY>
+            <ItemQty>200</ItemQty>
         </OrderItem>
     </Order>
     <Order OrderID="TO-006">
@@ -66,7 +66,7 @@
         <Destination>Denver, CO</Destination>
         <OrderItem>
             <ItemID>CT1928</ItemID>
-            <ItemQTY>120</ItemQTY>
+            <ItemQty>120</ItemQty>
         </OrderItem>
     </Order>
 </Orders>

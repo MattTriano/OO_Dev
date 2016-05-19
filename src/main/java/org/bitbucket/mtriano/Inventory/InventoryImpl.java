@@ -22,6 +22,15 @@ public class InventoryImpl implements Inventory {
         return inventory;
     }
 
+    public boolean hasItem(String itemID) throws InvalidDataException {
+        for (Stock stock : inventory) {
+            if (stock.getID().equals(itemID)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public Stock getStock(String id) throws InvalidDataException {
         if (id == null) {
             throw new InvalidDataException("null id passed to getStock");

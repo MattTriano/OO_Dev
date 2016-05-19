@@ -2,6 +2,7 @@ package org.bitbucket.mtriano.Facility;
 
 import org.bitbucket.mtriano.InvalidDataException;
 import org.bitbucket.mtriano.Inventory.Inventory;
+import org.bitbucket.mtriano.ItemCatalog;
 import org.bitbucket.mtriano.LinkedCity.LinkedCity;
 import org.bitbucket.mtriano.Inventory.Stock;
 
@@ -69,6 +70,14 @@ public class FacilityImpl implements Facility {
 
     public ArrayList<LinkedCity> getLinkedCities() throws InvalidDataException {
         return linkedCities;
+    }
+
+    public boolean hasItem(String itemID) throws InvalidDataException {
+        if (!ItemCatalog.getInstance().isItem(itemID)) {
+            throw new InvalidDataException("Invalid item ID passed to " +
+                    "FacilityImpl/hasItem");
+        }
+        return cityInventory.hasItem(itemID);
     }
 
     public Schedule getSchedule() throws InvalidDataException {

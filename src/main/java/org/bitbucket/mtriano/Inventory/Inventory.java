@@ -12,4 +12,5 @@ public interface Inventory {
     ArrayList<Stock> getInventory() throws InvalidDataException;
     Stock getStock(String id) throws InvalidDataException;
     Integer getStockQty(String id) throws InvalidDataException;
+    boolean hasItem(String id) throws InvalidDataException;
 }

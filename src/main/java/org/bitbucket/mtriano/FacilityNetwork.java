@@ -20,7 +20,7 @@ public final class FacilityNetwork {
     private static FacilityLoader loader = new FacilityNetworkXML();
 
     /* Access point for the singleton instance of the network
-
+     *
      * @return  the singleton instance
      */
     public static FacilityNetwork getInstance() {
@@ -43,7 +43,7 @@ public final class FacilityNetwork {
     }
 
     /* Controls access to the network
-
+     *
      * @return  the network instance
      */
     public ArrayList<Facility> getNetwork() {
@@ -60,7 +60,7 @@ public final class FacilityNetwork {
     }
 
     /* Prints the formatted facility status output from the project specification
-
+     *
      * @param  facility     The Facility object we want the status of
      */
     public void facilityStatus(Facility facility) throws InvalidDataException {
@@ -80,7 +80,7 @@ public final class FacilityNetwork {
     }
 
     /* Prints the cityID with an equal length of underscores
-
+     *
      * @param  cityID     The cityID to be printed
      */
     private void printCityID(String cityID) throws InvalidDataException {
@@ -121,7 +121,7 @@ public final class FacilityNetwork {
     }
 
     /* Prints the production schedule for a facility
-
+     *
      * @param  rate     The number of items a facility can produce in a day
      */
     private void printSchedule(int rate) throws InvalidDataException {
@@ -140,7 +140,7 @@ public final class FacilityNetwork {
     }
 
     /* Prints the inventory at a facility
-
+     *
      * @param  inventory     An ArrayList of the stock in inventory at a facility
      */
     private void printInventory(Inventory inventory)
@@ -155,7 +155,7 @@ public final class FacilityNetwork {
     }
 
     /* Wrapper method to use Strings of the IDs to print the shortest path
-
+     *
      * @param  start  The ID of the first Facility in the path
      * @param  end    The ID of the last Facility in the path
      */
@@ -166,7 +166,7 @@ public final class FacilityNetwork {
     }
 
     /* Prints the formatted output for a shortest path between two facilities
-
+     *
      * @param  start  The ID of the first Facility in the path
      * @param  end    The ID of the last Facility in the path
      */
@@ -229,7 +229,7 @@ public final class FacilityNetwork {
     }
 
     /* This looks up a facility by its cityID
-
+     *
      * @param   cityID      The ID of the desired facility
      * @return              The Facility object with that ID
      */
@@ -263,7 +263,7 @@ public final class FacilityNetwork {
     }
 
     /* returns the shortest path given the start and end facilities
-
+     *
      * @param  start  The ID of the first Facility in the path
      * @param  end    The ID of the last Facility in the path
      * @return        Returns an ordered ArrayList of the facilities
