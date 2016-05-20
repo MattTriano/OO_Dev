@@ -14,8 +14,8 @@ import java.util.ArrayList;
 public class FacilityImpl implements Facility {
 
     private String cityID;                          // city name/location
-    private int cityRate;                           // daily production rate
-    private int cityCost;                           // daily cost of operation
+    private Integer cityRate;                           // daily production rate
+    private Integer cityCost;                           // daily cost of operation
     private Inventory cityInventory;                // local inventory
     private ArrayList<LinkedCity> linkedCities;     // 1st degree linked cities
     private Schedule schedule;
@@ -23,7 +23,7 @@ public class FacilityImpl implements Facility {
     /*
      * Checks inputs for a Facility object
      */
-    public FacilityImpl(String id, int rate, int cost, Inventory inventory,
+    public FacilityImpl(String id, Integer rate, Integer cost, Inventory inventory,
                         ArrayList<LinkedCity> links, Schedule productionSchedule)
             throws InvalidDataException {
         if (id == null) {
@@ -56,11 +56,11 @@ public class FacilityImpl implements Facility {
         return cityID;
     }
 
-    public int getRate() throws InvalidDataException {
+    public Integer getRate() throws InvalidDataException {
         return cityRate;
     }
 
-    public int getCost() throws InvalidDataException {
+    public Integer getCost() throws InvalidDataException {
         return cityCost;
     }
 

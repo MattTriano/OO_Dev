@@ -22,8 +22,11 @@ public class Main {
             // Tests
             net.facilityStatus("Detroit, MI");
             cat.printCatalog();
-            net.shortestPathTest();
+            //net.shortestPathTest();
             net.getFacility("Chicago, IL").getSchedule().printSchedule();
+            for (Order order : orderList) {
+                handler.processOrder(order);
+            }
 
         } catch (InvalidDataException e) {
             e.printStackTrace();

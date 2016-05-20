@@ -12,8 +12,8 @@ import java.util.ArrayList;
 public interface Facility {
 
     String getCityID() throws InvalidDataException;
-    int getRate() throws InvalidDataException;
-    int getCost() throws InvalidDataException;
+    Integer getRate() throws InvalidDataException;
+    Integer getCost() throws InvalidDataException;
     Inventory getInventory() throws InvalidDataException;
     ArrayList<LinkedCity> getLinkedCities() throws InvalidDataException;
     boolean hasItem(String itemID) throws InvalidDataException;

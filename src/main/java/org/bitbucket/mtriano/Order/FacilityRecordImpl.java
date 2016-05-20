@@ -11,13 +11,14 @@ import org.bitbucket.mtriano.ShortestPath.ShortestPath;
 public class FacilityRecordImpl implements FacilityRecord {
 
     private Facility sourceFacility;
-    private Integer qtyFilled;
-    private Integer qtyUnfilled;
-    private Integer startDay;
-    private ShortestPath path;
+    private Integer qtyAvailable;
+    private Integer processingStart;
+    private Integer processingEnd;
+    private Integer travelTime;
 
-    public FacilityRecordImpl(Facility supplyingFacility, Integer initDay, Line line,
-                              Integer qty) throws InvalidDataException {
+    public FacilityRecordImpl(Facility supplyingFacility, Integer initDay,
+                              Integer endDay, Integer transitTime, Line line)
+            throws InvalidDataException {
         if (!FacilityNetwork.getInstance().isValidFacility(supplyingFacility)) {
             throw new InvalidDataException("Invalid facility passed" +
                     " to FacilityRecordImpl");
@@ -26,37 +27,39 @@ public class FacilityRecordImpl implements FacilityRecord {
             throw new InvalidDataException("Invalid start day passed " +
                     "to FacilityRecordImpl");
         }
+        if (endDay < initDay) {
+            throw new InvalidDataException("Impossible endDay passed " +
+                    "to FacilityRecordImpl");
+        }
         if (line == null) {
             throw new InvalidDataException("Null line passed to FacilityRecordImpl");
         }
-        if (qty < 0) {
-            throw new InvalidDataException("Negative fulfillment quantity " +
-                    "passed to FacilityRecordImpl");
-        }
+
 
         sourceFacility = supplyingFacility;
-        qtyFilled = qty;
-        qtyUnfilled = qty;
-        startDay = initDay;
+        qtyAvailable = supplyingFacility.getInventory().getStockQty(line.getLineID());
+        processingStart = initDay;
+        processingEnd = endDay;
+        travelTime = transitTime;
     }
 
     public Facility getFacility() throws InvalidDataException {
         return sourceFacility;
     }
 
-    public Integer getQtyFilled() throws InvalidDataException {
-        return qtyFilled;
+    public Integer getQtyAvailable() throws InvalidDataException {
+        return qtyAvailable;
     }
 
     public Integer getStartDay() throws InvalidDataException {
-        return startDay;
+        return processingStart;
     }
 
     public Integer getEndDay() throws InvalidDataException {
-        return null;
+        return processingEnd;
     }
 
     public Integer getArrivalDay() throws InvalidDataException {
-        return null;
+        return processingEnd + travelTime;
     }
 }

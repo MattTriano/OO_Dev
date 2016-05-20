@@ -17,7 +17,7 @@
         <StartTime>1</StartTime>
         <Destination>Boston, MA</Destination>
         <OrderItem>
-            <ItemID>PL132-c</ItemID>
+            <ItemID>PL132-C</ItemID>
             <ItemQty>5</ItemQty>
         </OrderItem>
         <OrderItem>

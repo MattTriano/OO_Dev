@@ -1,8 +1,13 @@
 package org.bitbucket.mtriano;
 
 import org.bitbucket.mtriano.Facility.Facility;
+import org.bitbucket.mtriano.Order.FacilityRecord;
+import org.bitbucket.mtriano.Order.FacilityRecordFactory;
 import org.bitbucket.mtriano.Order.Line;
 import org.bitbucket.mtriano.Order.Order;
+import org.bitbucket.mtriano.ShortestPath.ShortestPath;
+import org.bitbucket.mtriano.ShortestPath.ShortestPathAllPairsImpl;
+import org.bitbucket.mtriano.ShortestPath.ShortestPathAllPairsImplFactory;
 
 import java.util.ArrayList;
 
@@ -14,6 +19,7 @@ public final class OrderHandler {
     private static volatile OrderHandler instance;
     private static OrderLoader loader = new OrderReaderXML();
     private static ArrayList<Order> orderList;
+    private static ArrayList<FacilityRecord> masterRecords = new ArrayList<>();
     FacilityNetwork net = FacilityNetwork.getInstance();
 
     public static OrderHandler getInstance() {
@@ -37,21 +43,57 @@ public final class OrderHandler {
         return getInstance().orderList;
     }
 
+    //todo finish
     public void processOrder(Order order) throws InvalidDataException{
         ArrayList<Line> orderLines = order.getOrderLines();
+        for (Line line : orderLines) {
+            ArrayList<FacilityRecord> recs = processLineFRGenerator(order, line);
+        }
 
     }
 
-    public void processLine(Order order, Line line)
+    public ArrayList<FacilityRecord> recordSorter(ArrayList<FacilityRecord> unsorted)
+            throws InvalidDataException {
+        ArrayList<FacilityRecord> sortedList = new ArrayList<>();
+        FacilityRecord minRec = minRecord(unsorted);
+        sortedList.add(minRec)
+    }
+
+    public FacilityRecord minRecord(ArrayList<FacilityRecord> unsorted)
+            throws InvalidDataException {
+        Integer minArrivalDay = Integer.MAX_VALUE;
+        FacilityRecord minRec = unsorted.get(0);
+        for (FacilityRecord rec : unsorted) {
+            if (rec.getArrivalDay() < minArrivalDay) {
+                minRec = rec;
+                minArrivalDay = rec.getArrivalDay();
+            }
+        }
+        return minRec;
+    }
+
+    public ArrayList<FacilityRecord> processLineFRGenerator(Order order, Line line)
             throws InvalidDataException {
         ArrayList<Facility> sources = itemSource(order.getDestination(),
                 line.getLineID());
+        Facility destination = net.getFacility(order.getDestination());
         Integer itemQty = line.getLineQty();
+        String itemID = line.getLineID();
+        ArrayList<FacilityRecord> records = new ArrayList<>();
         if (!sources.isEmpty()) {
             for (Facility facility : sources) {
-
+                ShortestPath path = ShortestPathAllPairsImplFactory
+                        .CreateShortestPath(facility, destination);
+                Integer travelTime = (int) Math.ceil(path.getTravelTime(path.getLowPath(), 50));
+                Integer facilityItemQty = facility.getInventory().getStockQty(itemID);
+                Integer processingTime = (int) Math.ceil((facilityItemQty/facility.getRate()));
+                Integer start = order.getStartDay();
+                records.add(FacilityRecordFactory.createFacilityRecord(facility,
+                        start, start + processingTime, travelTime, line));
             }
         }
+        System.out.println("look at dem orders");
+        return records;
     }
 
     /* Makes a list of all facilities (except for the destination facility)
@@ -77,4 +119,8 @@ public final class OrderHandler {
         return sources;
     }
 
+    private static double round(double value, int decimalPlaces) {
+        int scalingFactor = (int) Math.pow(10, decimalPlaces);
+        return (double) Math.round(value * scalingFactor) / scalingFactor;
+    }
 }

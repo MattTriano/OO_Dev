@@ -12,8 +12,10 @@ import java.util.ArrayList;
  */
 public class FacilityImplFactory {
 
-    public static Facility createFacility(String id, int rate, int cost, Inventory inventory,
-                                          ArrayList<LinkedCity> links, Schedule schedule)
+    public static Facility createFacility(String id, Integer rate,
+                                          Integer cost, Inventory inventory,
+                                          ArrayList<LinkedCity> links,
+                                          Schedule schedule)
                                             throws InvalidDataException {
         return new FacilityImpl(id, rate, cost, inventory, links, schedule);
     }

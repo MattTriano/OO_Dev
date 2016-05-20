@@ -40,6 +40,7 @@ public class ShortestPathAllPairsImpl implements ShortestPath {
         this.network = FacilityNetwork.getInstance().getNetwork();
         startFacility = origin;
         endFacility = destination;
+        findBestPath(startFacility, endFacility);
     }
 
     /*

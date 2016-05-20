@@ -9,7 +9,7 @@ import org.bitbucket.mtriano.InvalidDataException;
 public interface FacilityRecord {
 
     Facility getFacility() throws InvalidDataException;
-    Integer getQtyFilled() throws InvalidDataException;
+    Integer getQtyAvailable() throws InvalidDataException;
     Integer getStartDay() throws InvalidDataException;
     Integer getEndDay() throws InvalidDataException;
     Integer getArrivalDay() throws InvalidDataException;
