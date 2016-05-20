@@ -10,5 +10,6 @@ public interface Stock {
 
     String getID() throws InvalidDataException;
     Integer getQuantity() throws InvalidDataException;
+    Integer shipStock(String itemID, Integer qty) throws InvalidDataException;
 
 }

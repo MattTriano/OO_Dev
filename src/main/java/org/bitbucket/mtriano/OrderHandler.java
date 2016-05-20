@@ -47,7 +47,16 @@ public final class OrderHandler {
     public void processOrder(Order order) throws InvalidDataException{
         ArrayList<Line> orderLines = order.getOrderLines();
         for (Line line : orderLines) {
-            ArrayList<FacilityRecord> recs = processLineFRGenerator(order, line);
+            ArrayList<FacilityRecord> records = processLineFRGenerator(order, line);
+            ArrayList<FacilityRecord> sortedRecords = recordSorter(records);
+            Integer remainingQty = line.getLineQty();
+            for (FacilityRecord sortedRec : sortedRecords) {
+                if (remainingQty <= 0){
+                    break;
+                } else if (remainingQty > sortedRec.getQtyAvailable()) {
+
+                }
+            }
         }
 
     }
@@ -55,8 +64,12 @@ public final class OrderHandler {
     public ArrayList<FacilityRecord> recordSorter(ArrayList<FacilityRecord> unsorted)
             throws InvalidDataException {
         ArrayList<FacilityRecord> sortedList = new ArrayList<>();
-        FacilityRecord minRec = minRecord(unsorted);
-        sortedList.add(minRec)
+        for (int i = 0; i < unsorted.size(); i++) {
+            FacilityRecord minRec = minRecord(unsorted);
+            sortedList.add(minRec);
+            unsorted.remove(minRec)
+        }
+        return sortedList;
     }
 
     public FacilityRecord minRecord(ArrayList<FacilityRecord> unsorted)

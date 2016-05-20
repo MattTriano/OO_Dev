@@ -63,4 +63,12 @@ public class InventoryImpl implements Inventory {
         }
         return null;
     }
+
+    public Integer shipQty(String itemID, Integer qty) throws InvalidDataException {
+        if (qty < 0) {
+            throw new InvalidDataException("Invalid qty passed to shipQty in InventoryImpl");
+        }
+        if (qty > getStockQty(itemID))
+
+    }
 }

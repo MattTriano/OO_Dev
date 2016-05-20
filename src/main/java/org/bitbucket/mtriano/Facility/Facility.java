@@ -19,4 +19,5 @@ public interface Facility {
     boolean hasItem(String itemID) throws InvalidDataException;
     boolean itemInStock(String itemID) throws InvalidDataException;
     Schedule getSchedule() throws InvalidDataException;
+    void scheduleProduction(Integer startDay, Integer quantity) throws InvalidDataException;
 }

@@ -97,4 +97,8 @@ public class FacilityImpl implements Facility {
         schedule.printSchedule();
     }
 
+    public void scheduleProduction(Integer startDay, Integer quantity) throws InvalidDataException {
+        schedule.scheduleProduction(startDay, quantity);
+    }
+
 }

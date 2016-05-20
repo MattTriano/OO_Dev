@@ -14,4 +14,5 @@ public interface Inventory {
     Integer getStockQty(String id) throws InvalidDataException;
     boolean hasItem(String id) throws InvalidDataException;
     boolean itemInStock(String id) throws InvalidDataException;
+    Integer shipQty(String itemID,Integer qty) throws InvalidDataException;
 }
