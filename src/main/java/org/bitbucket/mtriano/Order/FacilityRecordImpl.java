@@ -15,6 +15,7 @@ public class FacilityRecordImpl implements FacilityRecord {
     private Integer processingStart;
     private Integer processingEnd;
     private Integer travelTime;
+    private Integer arrivalDay;
 
     public FacilityRecordImpl(Facility supplyingFacility, Integer initDay,
                               Integer endDay, Integer transitTime, Line line)
@@ -41,6 +42,7 @@ public class FacilityRecordImpl implements FacilityRecord {
         processingStart = initDay;
         processingEnd = endDay;
         travelTime = transitTime;
+        arrivalDay = processingEnd + transitTime;
     }
 
     public Facility getFacility() throws InvalidDataException {
@@ -60,6 +62,6 @@ public class FacilityRecordImpl implements FacilityRecord {
     }
 
     public Integer getArrivalDay() throws InvalidDataException {
-        return processingEnd + travelTime;
+        return arrivalDay;
     }
 }

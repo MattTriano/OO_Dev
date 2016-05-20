@@ -3,6 +3,7 @@ package org.bitbucket.mtriano.Facility;
 import org.bitbucket.mtriano.InvalidDataException;
 import org.bitbucket.mtriano.Inventory.Inventory;
 import org.bitbucket.mtriano.LinkedCity.LinkedCity;
+import org.bitbucket.mtriano.Order.Line;
 
 import java.util.ArrayList;
 
@@ -19,5 +20,6 @@ public interface Facility {
     boolean hasItem(String itemID) throws InvalidDataException;
     boolean itemInStock(String itemID) throws InvalidDataException;
     Schedule getSchedule() throws InvalidDataException;
-    void scheduleProduction(Integer startDay, Integer quantity) throws InvalidDataException;
+    void scheduleProduction(Line line, Integer startDay, Integer quantity)
+            throws InvalidDataException;
 }

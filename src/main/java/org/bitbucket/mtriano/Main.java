@@ -27,6 +27,7 @@ public class Main {
             for (Order order : orderList) {
                 handler.processOrder(order);
             }
+            System.out.println("Holder");
 
         } catch (InvalidDataException e) {
             e.printStackTrace();

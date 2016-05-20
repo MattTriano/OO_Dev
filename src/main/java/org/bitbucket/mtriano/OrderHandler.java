@@ -43,6 +43,14 @@ public final class OrderHandler {
         return getInstance().orderList;
     }
 
+    public void processOrders() throws InvalidDataException {
+        ArrayList<Order> orderList = getOrderList();
+        for (Order order : orderList) {
+            processOrder(order);
+        }
+
+    }
+
     //todo finish
     public void processOrder(Order order) throws InvalidDataException{
         ArrayList<Line> orderLines = order.getOrderLines();
@@ -54,11 +62,19 @@ public final class OrderHandler {
                 if (remainingQty <= 0){
                     break;
                 } else if (remainingQty > sortedRec.getQtyAvailable()) {
-
+                    Integer tempQty = sortedRec.getQtyAvailable();
+                    sortedRec.getFacility().scheduleProduction(line,
+                            order.getStartDay(), sortedRec.getQtyAvailable());
+                    remainingQty -= tempQty;
+                    System.out.println("Just prepared " + tempQty + " of " + line.getLineID());
+                } else {
+                    sortedRec.getFacility().scheduleProduction(line,
+                            order.getStartDay(), remainingQty);
+                    remainingQty = 0;
                 }
+                masterRecords.add(sortedRec);
             }
         }
-
     }
 
     public ArrayList<FacilityRecord> recordSorter(ArrayList<FacilityRecord> unsorted)
@@ -67,7 +83,7 @@ public final class OrderHandler {
         for (int i = 0; i < unsorted.size(); i++) {
             FacilityRecord minRec = minRecord(unsorted);
             sortedList.add(minRec);
-            unsorted.remove(minRec)
+            unsorted.remove(minRec);
         }
         return sortedList;
     }
@@ -105,7 +121,6 @@ public final class OrderHandler {
                         start, start + processingTime, travelTime, line));
             }
         }
-        System.out.println("look at dem orders");
         return records;
     }
 

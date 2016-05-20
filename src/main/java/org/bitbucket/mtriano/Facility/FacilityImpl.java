@@ -5,6 +5,7 @@ import org.bitbucket.mtriano.Inventory.Inventory;
 import org.bitbucket.mtriano.ItemCatalog;
 import org.bitbucket.mtriano.LinkedCity.LinkedCity;
 import org.bitbucket.mtriano.Inventory.Stock;
+import org.bitbucket.mtriano.Order.Line;
 
 import java.util.ArrayList;
 
@@ -97,8 +98,12 @@ public class FacilityImpl implements Facility {
         schedule.printSchedule();
     }
 
-    public void scheduleProduction(Integer startDay, Integer quantity) throws InvalidDataException {
+    public void scheduleProduction(Line line, Integer startDay, Integer quantity) throws InvalidDataException {
         schedule.scheduleProduction(startDay, quantity);
+        Integer qtyShipped = cityInventory.shipQty(line.getLineID(), quantity);
+        if (qtyShipped > quantity) {
+            throw new InvalidDataException("Shipped too many items from " + cityID);
+        }
     }
 
 }
