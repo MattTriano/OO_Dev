@@ -38,6 +38,18 @@ public final class ItemCatalog {
         catalog = loader.getItems();
     }
 
+    public Item getItem(String itemID) throws InvalidDataException {
+        if (!isItem(itemID)) {
+            throw new InvalidDataException("Invalid itemID passed to getItem");
+        }
+        for (Item item : catalog) {
+            if (item.getID().equals(itemID)) {
+                return item;
+            }
+        }
+        return null;
+    }
+
     public ArrayList<Item> getCatalog() {
         return getInstance().catalog;
     }

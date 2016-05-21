@@ -7,10 +7,10 @@ import org.bitbucket.mtriano.InvalidDataException;
  * Created by Matt on 5/19/2016.
  */
 public class FacilityRecordFactory {
-    public static FacilityRecord createFacilityRecord(Facility facility,
+    public static FacilityRecord createFacilityRecord(Facility facility, Integer quantity,
                                                       Integer initDay, Integer endDay,
-                                                      Integer travelTime, Line line)
+                                                      Integer travelTime)
             throws InvalidDataException {
-        return new FacilityRecordImpl(facility, initDay, endDay, travelTime, line);
+        return new FacilityRecordImpl(facility, quantity, initDay, endDay, travelTime);
     }
 }

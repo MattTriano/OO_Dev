@@ -40,7 +40,7 @@ public class ScheduleImpl implements Schedule{
             Integer capacityToday = schedule.get(i);
             if (quantity == 0) {
                 break;
-            } else if (capacityToday == 0) {
+            } else if (capacityToday <= 0) {
                 continue;
             } else if (quantity < capacityToday) {
                 schedule.set(i, (capacityToday - quantity));

@@ -11,14 +11,14 @@ import org.bitbucket.mtriano.ShortestPath.ShortestPath;
 public class FacilityRecordImpl implements FacilityRecord {
 
     private Facility sourceFacility;
-    private Integer qtyAvailable;
+    private Integer fillQty;
     private Integer processingStart;
     private Integer processingEnd;
     private Integer travelTime;
     private Integer arrivalDay;
 
-    public FacilityRecordImpl(Facility supplyingFacility, Integer initDay,
-                              Integer endDay, Integer transitTime, Line line)
+    public FacilityRecordImpl(Facility supplyingFacility, Integer quantity, Integer initDay,
+                              Integer endDay, Integer transitTime)
             throws InvalidDataException {
         if (!FacilityNetwork.getInstance().isValidFacility(supplyingFacility)) {
             throw new InvalidDataException("Invalid facility passed" +
@@ -32,13 +32,10 @@ public class FacilityRecordImpl implements FacilityRecord {
             throw new InvalidDataException("Impossible endDay passed " +
                     "to FacilityRecordImpl");
         }
-        if (line == null) {
-            throw new InvalidDataException("Null line passed to FacilityRecordImpl");
-        }
 
 
         sourceFacility = supplyingFacility;
-        qtyAvailable = supplyingFacility.getInventory().getStockQty(line.getLineID());
+        fillQty = quantity; //supplyingFacility.getInventory().getStockQty(line.getLineID());
         processingStart = initDay;
         processingEnd = endDay;
         travelTime = transitTime;
@@ -49,8 +46,8 @@ public class FacilityRecordImpl implements FacilityRecord {
         return sourceFacility;
     }
 
-    public Integer getQtyAvailable() throws InvalidDataException {
-        return qtyAvailable;
+    public Integer getFillQty() throws InvalidDataException {
+        return fillQty;
     }
 
     public Integer getStartDay() throws InvalidDataException {
@@ -59,6 +56,14 @@ public class FacilityRecordImpl implements FacilityRecord {
 
     public Integer getEndDay() throws InvalidDataException {
         return processingEnd;
+    }
+
+    public Integer getProcessingTime() throws InvalidDataException {
+        return processingEnd - processingStart;
+    }
+
+    public Integer getTravelTime() {
+        return travelTime;
     }
 
     public Integer getArrivalDay() throws InvalidDataException {
