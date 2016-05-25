@@ -65,5 +65,6 @@ public class ScheduleImpl implements Schedule{
         for (int i = 1; i <= days; i++) {
             System.out.printf("%3d", schedule.get(i-1));
         }
+        System.out.println(" ");
     }
 }

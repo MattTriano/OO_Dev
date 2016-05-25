@@ -1,6 +1,7 @@
 package org.bitbucket.mtriano;
 
 import com.sun.org.apache.xpath.internal.operations.Or;
+import org.bitbucket.mtriano.Facility.Facility;
 import org.bitbucket.mtriano.Item.Item;
 import org.bitbucket.mtriano.Order.Order;
 
@@ -22,12 +23,17 @@ public class Main {
             // Tests
             net.facilityStatus("Detroit, MI");
             cat.printCatalog();
-            //net.shortestPathTest();
+
+            // status precheck
+            net.facilityStatus();
             net.getFacility("Chicago, IL").getSchedule().printSchedule();
             for (Order order : orderList) {
                 handler.processOrder(order);
             }
-            System.out.println("Holder");
+
+            // status postcheck
+            net.facilityStatus();
+
 
         } catch (InvalidDataException e) {
             e.printStackTrace();

@@ -63,6 +63,13 @@ public final class FacilityNetwork {
         facilityStatus(getFacility(cityID));
     }
 
+    public void facilityStatus() throws InvalidDataException {
+        ArrayList<String> cityIDs = facilityList();
+        for (String cityID : cityIDs) {
+            facilityStatus(cityID);
+        }
+    }
+
     /* Prints the formatted facility status output from the project specification
      *
      * @param  facility     The Facility object we want the status of
@@ -80,7 +87,7 @@ public final class FacilityNetwork {
         System.out.println(" ");
         printLinkedCities(linkedCities);
         printInventory(inventory);
-        printSchedule(rate);
+        facility.printSchedule();
     }
 
     /* Prints the cityID with an equal length of underscores
@@ -118,8 +125,8 @@ public final class FacilityNetwork {
             throws InvalidDataException {
         System.out.println("Direct Links:");
         for (LinkedCity city : linkedCities) {
-            double days = city.getDistance() / 400;
-            System.out.print(city.getCityID() + " (" + round(days, 1) + "d); ");
+            double days = Math.ceil((double)city.getDistance() / 400);
+            System.out.print(city.getCityID() + " (" + days + "d); ");
         }
         System.out.println(" ");
     }

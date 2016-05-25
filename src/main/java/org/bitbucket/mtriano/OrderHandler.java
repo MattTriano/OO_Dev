@@ -67,7 +67,6 @@ public final class OrderHandler {
                     sortedRec.getFacility().scheduleProduction(line,
                             order.getStartDay(), sortedRec.getFillQty());
                     remainingQty -= tempQty;
-                    System.out.println("Just prepared " + tempQty + " of " + line.getLineID());
                 } else {
                     Facility facility = sortedRec.getFacility();
                     facility.scheduleProduction(line, order.getStartDay(), remainingQty);
