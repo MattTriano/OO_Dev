@@ -140,31 +140,11 @@ public final class FacilityNetwork {
         }
         System.out.println(" ");
     }
-    //todo remove
-//    /* Prints the production schedule for a facility
-//     *
-//     * @param  rate     The number of items a facility can produce in a day
-//     */
-//    private void printSchedule(int rate) throws InvalidDataException {
-//        System.out.println("Depleted (Used-Up) Inventory: None \n");
-//        System.out.println("Schedule:");
-//        System.out.print("Day:        ");
-//        for (int i = 1; i <= 20; i++) {
-//            System.out.printf("%3d", i);
-//        }
-//        System.out.print("\nAvailable:  ");
-//        for (int i = 1; i <= 20; i++) {
-//            System.out.printf("%3d", rate);
-//        }
-//        System.out.println(" ");
-//        System.out.println("-----------------------------------------------------------------------------");
-//    }
 
     /* Prints the inventory at a facility
      *
      * @param  inventory     An ArrayList of the stock in inventory at a facility
      */
-    //todo include depleted stock
     private void printInventory(Inventory inventory)
             throws InvalidDataException {
         System.out.println(" ");

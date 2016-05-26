@@ -10,15 +10,15 @@ import org.bitbucket.mtriano.ShortestPath.ShortestPathAllPairsImplFactory;
 import java.util.ArrayList;
 
 /**
- * Created by Matt on 5/18/2016.
+ *  Singleton that handles the processing of orders.
  */
-//todo comment this class
+
 public final class OrderHandler {
 
     private static volatile OrderHandler instance;
     private static OrderLoader loader = new OrderReaderXML();
     private static ArrayList<Order> orderList;
-    private static ArrayList<ArrayList<FacilityRecord>> masterRecords = new ArrayList<>();
+//    private static ArrayList<ArrayList<FacilityRecord>> masterRecords = new ArrayList<>();
     FacilityNetwork net = FacilityNetwork.getInstance();
     ItemCatalog catalog = ItemCatalog.getInstance();
 
@@ -132,7 +132,9 @@ public final class OrderHandler {
     }
 
     /*  Sorts FacilityRecords by arrivalDay (lowest to highest)
-     *  
+     *
+     *  @param  unsorted        The solution FacilityRecords in unsorted order
+     *  @return                 The solution FacilityRecords in sorted order
      */
     public ArrayList<FacilityRecord> recordSorter(ArrayList<FacilityRecord> unsorted)
             throws InvalidDataException {
@@ -146,6 +148,11 @@ public final class OrderHandler {
         return sortedList;
     }
 
+    /*  Helper method that returns the FacilityRecord with the soonest arrivalDay
+     *
+     *  @param  unsorted         A list of FacilityRecords
+     *  @return                  The FacilityRecord with the soonest arrivalDay
+     */
     public FacilityRecord minRecord(ArrayList<FacilityRecord> unsorted)
             throws InvalidDataException {
         Integer minArrivalDay = Integer.MAX_VALUE;
@@ -159,15 +166,16 @@ public final class OrderHandler {
         return minRec;
     }
 
-    /*  generates the FacilityRecords that satisfy a line on an order
+    /*  Generates the FacilityRecords that satisfy a line on an order
      *
+     *  @param  order
+     *  @param  line
      */
     public ArrayList<FacilityRecord> processLineFRGenerator(Order order, Line line)
             throws InvalidDataException {
         ArrayList<Facility> sources = itemSource(order.getDestination(),
                 line.getLineID());
         Facility destination = net.getFacility(order.getDestination());
-        Integer itemQty = line.getLineQty();
         String itemID = line.getLineID();
         ArrayList<FacilityRecord> records = new ArrayList<>();
         if (!sources.isEmpty()) {
