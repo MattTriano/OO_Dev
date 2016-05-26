@@ -5,7 +5,7 @@ import org.bitbucket.mtriano.InvalidDataException;
 import java.util.ArrayList;
 
 /**
- * Created by Matt on 5/17/2016.
+ * Factory for an Inventory object
  */
 public class InventoryImplFactory {
 

@@ -5,14 +5,9 @@ import org.bitbucket.mtriano.InvalidDataException;
 import java.util.ArrayList;
 
 /**
- * Created by Matt on 5/21/2016.
+ * Interface for OrderFulfillment objects
  */
 public interface OrderFulfillment {
-
-//    String getOrderID() throws InvalidDataException;
-//    Integer getOrderStartDay() throws InvalidDataException;
-//    String getDestination() throws InvalidDataException;
-//    ArrayList<>
 
     void printOrderFulfillment() throws InvalidDataException;
     Integer getTotalOrderCost() throws InvalidDataException;

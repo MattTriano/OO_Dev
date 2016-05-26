@@ -5,11 +5,11 @@ import org.bitbucket.mtriano.InvalidDataException;
 import java.util.ArrayList;
 
 /**
- * Created by Matt on 5/16/2016.
+ * Interface for a Schedule
  */
 public interface Schedule {
 
-    ArrayList<Integer> getAvailability() throws InvalidDataException;
+    ArrayList<Integer> getSchedule() throws InvalidDataException;
     void scheduleProduction(Integer startDay, Integer quantity) throws InvalidDataException;
     void printSchedule() throws InvalidDataException;
 

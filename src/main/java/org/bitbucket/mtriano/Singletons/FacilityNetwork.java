@@ -1,8 +1,8 @@
 package org.bitbucket.mtriano.Singletons;
 
 import org.bitbucket.mtriano.Facility.Facility;
-import org.bitbucket.mtriano.FacilityLoader;
-import org.bitbucket.mtriano.FacilityNetworkXML;
+import org.bitbucket.mtriano.Facility.FacilityLoader;
+import org.bitbucket.mtriano.XMLReaders.FacilityNetworkXML;
 import org.bitbucket.mtriano.InvalidDataException;
 import org.bitbucket.mtriano.Inventory.Inventory;
 import org.bitbucket.mtriano.Inventory.Stock;
@@ -67,10 +67,12 @@ public final class FacilityNetwork {
     }
 
     public void facilityStatus() throws InvalidDataException {
+        printDashes();
         ArrayList<String> cityIDs = facilityList();
         for (String cityID : cityIDs) {
             facilityStatus(cityID);
         }
+        printDashes();
     }
 
     /* Prints the formatted facility status output from the project specification
@@ -90,6 +92,7 @@ public final class FacilityNetwork {
         System.out.println(" ");
         printLinkedCities(linkedCities);
         printInventory(inventory);
+        System.out.println("");
         facility.printSchedule();
     }
 
@@ -98,12 +101,16 @@ public final class FacilityNetwork {
      * @param  cityID     The cityID to be printed
      */
     private void printCityID(String cityID) throws InvalidDataException {
-        System.out.println("-----------------------------------------------------------------------------");
+        printDashes();
         System.out.println(cityID);
         for (int i = 0; i < cityID.length(); i++){
             System.out.print("-");
         }
         System.out.print("\n");
+    }
+
+    private void printDashes() throws InvalidDataException {
+        System.out.println("-----------------------------------------------------------------------------");
     }
 
     /* A helper method that replicates the single decimal point format
@@ -133,37 +140,66 @@ public final class FacilityNetwork {
         }
         System.out.println(" ");
     }
-
-    /* Prints the production schedule for a facility
-     *
-     * @param  rate     The number of items a facility can produce in a day
-     */
-    private void printSchedule(int rate) throws InvalidDataException {
-        System.out.println("Depleted (Used-Up) Inventory: None \n");
-        System.out.println("Schedule:");
-        System.out.print("Day:        ");
-        for (int i = 1; i <= 20; i++) {
-            System.out.printf("%3d", i);
-        }
-        System.out.print("\nAvailable:  ");
-        for (int i = 1; i <= 20; i++) {
-            System.out.printf("%3d", rate);
-        }
-        System.out.println(" ");
-        System.out.println("-----------------------------------------------------------------------------");
-    }
+    //todo remove
+//    /* Prints the production schedule for a facility
+//     *
+//     * @param  rate     The number of items a facility can produce in a day
+//     */
+//    private void printSchedule(int rate) throws InvalidDataException {
+//        System.out.println("Depleted (Used-Up) Inventory: None \n");
+//        System.out.println("Schedule:");
+//        System.out.print("Day:        ");
+//        for (int i = 1; i <= 20; i++) {
+//            System.out.printf("%3d", i);
+//        }
+//        System.out.print("\nAvailable:  ");
+//        for (int i = 1; i <= 20; i++) {
+//            System.out.printf("%3d", rate);
+//        }
+//        System.out.println(" ");
+//        System.out.println("-----------------------------------------------------------------------------");
+//    }
 
     /* Prints the inventory at a facility
      *
      * @param  inventory     An ArrayList of the stock in inventory at a facility
      */
+    //todo include depleted stock
     private void printInventory(Inventory inventory)
             throws InvalidDataException {
+        System.out.println(" ");
         System.out.println("Active Inventory:");
         System.out.println("    Item ID     Quantity");
         ArrayList<Stock> stockOnHand = inventory.getInventory();
         for (Stock item : stockOnHand) {
             System.out.printf("    %-11s %-9d %n", item.getID(), item.getQuantity());
+        }
+        depletedInventory(inventory);
+    }
+
+    /*  Determines what inventory items are depleted and prints them
+     *  in the facility status output
+     *
+     *  @param  inventory       The inventory for a facility
+     */
+    private void depletedInventory(Inventory inventory) throws InvalidDataException {
+        ArrayList<Stock> heldStock = inventory.getInventory();
+        ArrayList<String> depleted = new ArrayList<>();
+        for (Stock stock : heldStock) {
+            if (!inventory.itemInStock(stock.getID())) {
+                depleted.add(stock.getID());
+            }
+        }
+        System.out.println(" ");
+        System.out.print("Depleted (Used-Up) Inventory: ");
+        if (depleted.isEmpty()) {
+            System.out.print("None");
+        } else {
+            int i = 0;
+            System.out.print(depleted.get(i));
+            for (i = 1; i < depleted.size(); i++) {
+                System.out.print(", " + depleted.get(i));
+            }
         }
         System.out.println(" ");
     }

@@ -3,7 +3,7 @@ package org.bitbucket.mtriano.Facility;
 import org.bitbucket.mtriano.InvalidDataException;
 
 /**
- * Created by Matt on 5/17/2016.
+ * Factory for a Schedule object
  */
 public class ScheduleImplFactory {
 

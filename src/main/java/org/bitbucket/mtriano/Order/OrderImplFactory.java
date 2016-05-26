@@ -5,7 +5,7 @@ import org.bitbucket.mtriano.InvalidDataException;
 import java.util.ArrayList;
 
 /**
- * Created by Matt on 5/18/2016.
+ * Factory for Order objects
  */
 public class OrderImplFactory {
     public static Order createOrder(Integer startDay, String orderID,

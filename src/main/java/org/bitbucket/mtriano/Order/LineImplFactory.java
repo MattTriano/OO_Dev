@@ -3,7 +3,7 @@ package org.bitbucket.mtriano.Order;
 import org.bitbucket.mtriano.InvalidDataException;
 
 /**
- * Created by Matt on 5/18/2016.
+ * Factory for Line objects
  */
 public class LineImplFactory {
 

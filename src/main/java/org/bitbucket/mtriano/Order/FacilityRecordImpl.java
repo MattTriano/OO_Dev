@@ -1,12 +1,11 @@
 package org.bitbucket.mtriano.Order;
 
 import org.bitbucket.mtriano.Facility.Facility;
-import org.bitbucket.mtriano.FacilityNetwork;
+import org.bitbucket.mtriano.Singletons.FacilityNetwork;
 import org.bitbucket.mtriano.InvalidDataException;
-import org.bitbucket.mtriano.ShortestPath.ShortestPath;
 
 /**
- * Created by Matt on 5/19/2016.
+ * Implements FacilityRecord objects
  */
 public class FacilityRecordImpl implements FacilityRecord {
 
@@ -32,7 +31,6 @@ public class FacilityRecordImpl implements FacilityRecord {
             throw new InvalidDataException("Impossible endDay passed " +
                     "to FacilityRecordImpl");
         }
-
 
         sourceFacility = supplyingFacility;
         fillQty = quantity; //supplyingFacility.getInventory().getStockQty(line.getLineID());

@@ -1,9 +1,10 @@
 package org.bitbucket.mtriano;
 
-import com.sun.org.apache.xpath.internal.operations.Or;
-import org.bitbucket.mtriano.Facility.Facility;
 import org.bitbucket.mtriano.Item.Item;
 import org.bitbucket.mtriano.Order.Order;
+import org.bitbucket.mtriano.Singletons.FacilityNetwork;
+import org.bitbucket.mtriano.Singletons.ItemCatalog;
+import org.bitbucket.mtriano.Singletons.OrderHandler;
 
 import java.util.ArrayList;
 
@@ -21,14 +22,16 @@ public class Main {
             ArrayList<Order> orderList = handler.getOrderList();
 
             // Tests
-            net.facilityStatus("Detroit, MI");
-            cat.printCatalog();
+//            net.facilityStatus("Detroit, MI");
+//            cat.printCatalog();
 
             // status precheck
             net.facilityStatus();
-            net.getFacility("Chicago, IL").getSchedule().printSchedule();
+            //net.getFacility("Chicago, IL").getSchedule().printSchedule();
+            int i = 1;
             for (Order order : orderList) {
-                handler.processOrder(order);
+                handler.processOrder(order, i);
+                i++;
             }
 
             // status postcheck

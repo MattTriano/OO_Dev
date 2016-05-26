@@ -5,7 +5,7 @@ import org.bitbucket.mtriano.InvalidDataException;
 import java.util.ArrayList;
 
 /**
- * Created by Matt on 5/17/2016.
+ * Interface for Order objects
  */
 public interface Order {
 

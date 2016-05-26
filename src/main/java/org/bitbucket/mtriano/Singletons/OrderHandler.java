@@ -2,9 +2,8 @@ package org.bitbucket.mtriano.Singletons;
 
 import org.bitbucket.mtriano.Facility.Facility;
 import org.bitbucket.mtriano.InvalidDataException;
-import org.bitbucket.mtriano.ItemCatalog;
 import org.bitbucket.mtriano.Order.*;
-import org.bitbucket.mtriano.OrderReaderXML;
+import org.bitbucket.mtriano.XMLReaders.OrderReaderXML;
 import org.bitbucket.mtriano.ShortestPath.ShortestPath;
 import org.bitbucket.mtriano.ShortestPath.ShortestPathAllPairsImplFactory;
 
@@ -13,6 +12,7 @@ import java.util.ArrayList;
 /**
  * Created by Matt on 5/18/2016.
  */
+//todo comment this class
 public final class OrderHandler {
 
     private static volatile OrderHandler instance;
@@ -39,10 +39,13 @@ public final class OrderHandler {
         orderList = loader.getOrderList();
     }
 
+    /*  Singleton access point  */
     public ArrayList<Order> getOrderList() {
         return getInstance().orderList;
     }
 
+    /*  Processes all of the orders in orderList
+     */
     public void processOrders() throws InvalidDataException {
         ArrayList<Order> orderList = getOrderList();
         for (Order order : orderList) {
@@ -51,7 +54,20 @@ public final class OrderHandler {
 
     }
 
-    //todo finish
+    public void processOrder(Order order, Integer orderNumber)
+            throws InvalidDataException {
+        if (orderNumber < 0) {
+            throw new InvalidDataException("Invalid order number passed to processOrder");
+        }
+        printDashes();
+        System.out.print("Order #" + orderNumber);
+        processOrder(order);
+        printDashes();
+    }
+
+    /*
+     *
+     */
     public void processOrder(Order order) throws InvalidDataException{
         ArrayList<Line> orderLines = order.getOrderLines();
         ArrayList<Integer> lineCosts = new ArrayList<>();
@@ -83,7 +99,7 @@ public final class OrderHandler {
             }
             orderSolution.add(lineSolution);
             lineCosts.add(lineCost(itemCost, lineSolution));
-            System.out.println("");
+//            System.out.println("");
         }
 
         OrderFulfillment fill = OrderFulfillmentFactory.createOrderFulfillment(order, orderSolution, lineCosts);
@@ -182,8 +198,7 @@ public final class OrderHandler {
         return sources;
     }
 
-    private static double round(double value, int decimalPlaces) {
-        int scalingFactor = (int) Math.pow(10, decimalPlaces);
-        return (double) Math.round(value * scalingFactor) / scalingFactor;
+    private void printDashes() throws InvalidDataException {
+        System.out.println("-----------------------------------------------------------------------------");
     }
 }

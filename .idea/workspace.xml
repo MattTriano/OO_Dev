@@ -10,16 +10,24 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/Facility.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/FacilityImpl.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/FacilityImplFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/FacilityLoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/FacilityNetwork.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/FacilityNetworkXML.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/FacilityNetworkXMLReader.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/Identifiable.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/Item.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/ItemCatalog.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/ItemImpl.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/ItemImplFactory.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/ItemLoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/ItemLoaderXML.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/ItemXMLLoader.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/LinkedCity.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/LinkedCityImpl.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/LinkedCityImplFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/OrderHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/OrderLoader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/OrderReaderXML.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/Pair.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/PairImpl.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/PairImplFactory.class" afterPath="" />
@@ -30,12 +38,42 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/StockImpl.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/StockImplFactory.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/XMLReader.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/Facility.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/Facility.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/FacilityLoader.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/FacilityLoader.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/FacilityNetwork.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Singletons/FacilityNetwork.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/FacilityNetworkXML.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/XMLReaders/FacilityNetworkXML.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/ItemCatalog.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Singletons/ItemCatalog.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/ItemLoaderXML.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/XMLReaders/ItemLoaderXML.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/OrderHandler.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Singletons/OrderHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/OrderLoader.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderLoader.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/OrderReaderXML.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/XMLReaders/OrderReaderXML.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/Facility/FacilityImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/Facility/FacilityImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/Main.class" afterPath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/Order/FacilityRecordImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/Order/FacilityRecordImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/Order/LineImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/Order/LineImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/Order/OrderImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/Order/OrderImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/ShortestPath/ShortestPathAllPairsImpl.class" afterPath="$PROJECT_DIR$/target/classes/org/bitbucket/mtriano/ShortestPath/ShortestPathAllPairsImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/FacilityImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/FacilityImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/Schedule.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/Schedule.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/ScheduleImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/ScheduleImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/FacilityNetwork.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/FacilityNetwork.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/ScheduleImplFactory.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/ScheduleImplFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/Inventory.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/Inventory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/InventoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/InventoryImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/InventoryImplFactory.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/InventoryImplFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Main.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/FacilityRecord.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/FacilityRecord.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/FacilityRecordFactory.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/FacilityRecordFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/FacilityRecordImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/FacilityRecordImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/Line.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/Line.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/LineImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/LineImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/LineImplFactory.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/LineImplFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/Order.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/Order.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderFulfillment.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderFulfillment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderFulfillmentFactory.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderFulfillmentFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderFulfillmentImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderFulfillmentImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/OrderHandler.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/OrderHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderImplFactory.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderImplFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/ShortestPath/ShortestPathAllPairsImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/ShortestPath/ShortestPathAllPairsImpl.java" />
     </list>
     <ignored path="Logistics.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,42 +105,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="FacilityImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/FacilityImpl.java">
+      <file leaf-file-name="OrderHandler.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Singletons/OrderHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.611111">
-              <caret line="59" column="43" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Facility.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/Facility.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Schedule.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/Schedule.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="92" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="92" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/Order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.47530866">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,8 +120,18 @@
       <file leaf-file-name="OrderImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3888888">
-              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderFulfillment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderFulfillment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -121,7 +141,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderFulfillmentImpl.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="151" column="5" selection-start-line="151" selection-start-column="5" selection-end-line="151" selection-end-column="5" />
+              <caret line="188" column="9" selection-start-line="188" selection-start-column="9" selection-end-line="188" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,41 +149,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.76796716">
-              <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScheduleImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/ScheduleImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.388889">
-              <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FacilityNetwork.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/FacilityNetwork.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.611111">
-              <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LinkedCityImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/LinkedCity/LinkedCityImpl.java">
+      <file leaf-file-name="OrderImplFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderImplFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/Order.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemLoader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Item/ItemLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -190,11 +200,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/PairImplFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/ShortestPath.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/ShortestPathAllPairsImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/ShortestPathAllPairsImplFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Stock.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/StockImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/StockImplFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Item/ItemLoader.java" />
@@ -203,44 +208,49 @@
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/ScheduleImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/InventoryImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/InventoryImplFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/ScheduleImplFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/FacilityNetworkXML.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/Schedule.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/Line.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/LineImplFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/Order.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderImplFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/OrderLoader.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/OrderReaderXML.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/StockImplFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/LineImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/FacilityImplFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Data/Orders.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/ShortestPath/ShortestPathAllPairsImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/FacilityRecordComparator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/Inventory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/Stock.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/StockImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/InventoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/FacilityImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/BackOrder.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/BackOrderImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/LineRecord.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/FacilityRecordFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/FacilityRecord.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderFulfillment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/FacilityRecordImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/ItemCatalog.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderFulfillmentFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/OrderHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderFulfillmentImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/Facility.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/ScheduleImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/FacilityNetwork.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/OrderLoader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderLoader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/XMLReaders/ItemLoaderXML.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/FacilityLoader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderFulfillmentImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Singletons/FacilityNetwork.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/Schedule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/ScheduleImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/ScheduleImplFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/Inventory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/InventoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/InventoryImplFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/FacilityRecord.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/FacilityRecordFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/FacilityRecordImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/Line.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/LineImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/LineImplFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderFulfillment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderFulfillmentFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderImplFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Singletons/OrderHandler.java" />
       </list>
     </option>
   </component>
@@ -452,121 +462,45 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Singletons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Logistics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Logistics" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="org" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bitbucket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mtriano" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Order" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Logistics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Logistics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bitbucket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mtriano" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Item" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Logistics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Logistics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bitbucket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mtriano" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Facility" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Logistics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Logistics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bitbucket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mtriano" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -600,7 +534,7 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="org.bitbucket.mtriano.FacilityNetworkXML" />
+      <option name="MAIN_CLASS_NAME" value="org.bitbucket.mtriano.XMLReaders.FacilityNetworkXML" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1057,20 +991,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1298" height="1004" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.49785638" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25680473" sideWeight="0.48499465" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29704142" sideWeight="0.48499465" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27100593" sideWeight="0.50570965" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34201184" sideWeight="0.49021208" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289941" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19408284" sideWeight="0.49021208" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299025" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19296254" sideWeight="0.49785638" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1928994" sideWeight="0.49785638" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19820555" sideWeight="0.4942857" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26672104" sideWeight="0.4942857" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280363" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1123,16 +1057,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/FacilityNetwork.java</url>
-          <line>125</line>
+          <url>file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Main.java</url>
+          <line>37</line>
           <properties />
-          <option name="timeStamp" value="111" />
+          <option name="timeStamp" value="116" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="112" />
+      <option name="time" value="117" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1141,21 +1075,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Item/ItemLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30019492">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/InventoryImplFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/ShortestPath/Pair.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18965517">
@@ -1175,42 +1094,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/ItemLoaderXML.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/FacilityLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27093595">
-          <caret line="12" column="40" selection-start-line="11" selection-start-column="4" selection-end-line="12" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderImplFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5614035">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/OrderLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45614034">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1237,14 +1120,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/FacilityImplFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46059114">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/ShortestPath/ShortestPath.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10837439">
@@ -1253,7 +1128,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/OrderReaderXML.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/XMLReaders/OrderReaderXML.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
@@ -1265,14 +1140,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.387097">
           <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/LineImplFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1292,30 +1159,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/FacilityNetworkXML.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/XMLReaders/FacilityNetworkXML.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="117" column="12" selection-start-line="117" selection-start-column="12" selection-end-line="117" selection-end-column="32" />
           <folding>
-            <element signature="e#5709#5710#0" expanded="false" />
-            <element signature="e#5747#5748#0" expanded="false" />
+            <element signature="e#5825#5826#0" expanded="false" />
+            <element signature="e#5863#5864#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/Stock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="78" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/Inventory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1329,38 +1180,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/Line.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/ScheduleImplFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/FacilityRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="85" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/LineImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Item/ItemImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1369,30 +1188,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/StockImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/InventoryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/ItemCatalog.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Singletons/ItemCatalog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding>
-            <element signature="e#1406#1407#0" expanded="true" />
-            <element signature="e#1450#1451#0" expanded="true" />
-            <marker date="1463869956384" expanded="true" signature="1697:2080" placeholder="//..." />
+            <element signature="e#1523#1524#0" expanded="true" />
+            <element signature="e#1567#1568#0" expanded="true" />
+            <marker date="1464213292815" expanded="true" signature="1814:2197" placeholder="//..." />
           </folding>
         </state>
       </provider>
@@ -1405,46 +1208,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderFulfillment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7254902">
-          <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/FacilityRecordFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5176471">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Data/ItemCatalog.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.8543689">
           <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/OrderHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.9444447">
-          <caret line="91" column="0" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/FacilityRecordImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1473,66 +1240,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/Facility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderFulfillmentFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32958803">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/FacilityImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.611111">
-          <caret line="59" column="43" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/Schedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="92" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3888888">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderFulfillmentImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="151" column="5" selection-start-line="151" selection-start-column="5" selection-end-line="151" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/LinkedCity/LinkedCityImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1541,27 +1248,249 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/FacilityNetwork.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/FacilityLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.611111">
-          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/ScheduleImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/XMLReaders/ItemLoaderXML.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.388889">
-          <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.46059114">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76796716">
-          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Singletons/FacilityNetwork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="177" column="5" selection-start-line="177" selection-start-column="5" selection-end-line="177" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/FacilityImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/FacilityImplFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/Inventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/InventoryImplFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1754386">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/InventoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1754386">
+          <caret line="91" column="52" selection-start-line="91" selection-start-column="52" selection-end-line="91" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/Stock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="78" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Inventory/StockImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03508772">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/ScheduleImplFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1754386">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/ScheduleImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/FacilityRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1754386">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/FacilityRecordFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1754386">
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/Line.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1754386">
+          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/LineImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1754386">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/LineImplFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1754386">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/FacilityRecordImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0524691">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/Schedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16975309">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderFulfillmentFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13580246">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13580246">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Facility/Facility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5771605">
+          <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Item/ItemLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderImplFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderFulfillment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderFulfillmentImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="188" column="9" selection-start-line="188" selection-start-column="9" selection-end-line="188" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Order/OrderImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/bitbucket/mtriano/Singletons/OrderHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47530866">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

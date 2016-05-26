@@ -4,7 +4,7 @@ import org.bitbucket.mtriano.Facility.Facility;
 import org.bitbucket.mtriano.Facility.FacilityImplFactory;
 import org.bitbucket.mtriano.Facility.Schedule;
 import org.bitbucket.mtriano.Facility.ScheduleImplFactory;
-import org.bitbucket.mtriano.FacilityLoader;
+import org.bitbucket.mtriano.Facility.FacilityLoader;
 import org.bitbucket.mtriano.InvalidDataException;
 import org.bitbucket.mtriano.Inventory.Inventory;
 import org.bitbucket.mtriano.Inventory.InventoryImplFactory;

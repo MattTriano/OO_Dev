@@ -1,10 +1,10 @@
 package org.bitbucket.mtriano.Order;
 
 import org.bitbucket.mtriano.InvalidDataException;
-import org.bitbucket.mtriano.ItemCatalog;
+import org.bitbucket.mtriano.Singletons.ItemCatalog;
 
 /**
- * Created by Matt on 5/18/2016.
+ * Implements the Line interface
  */
 public class LineImpl implements Line {
 

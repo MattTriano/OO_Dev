@@ -5,7 +5,7 @@ import org.bitbucket.mtriano.InvalidDataException;
 import java.util.ArrayList;
 
 /**
- * Created by Matt on 5/17/2016.
+ * Implements an Inventory object
  */
 public class InventoryImpl implements Inventory {
 
@@ -22,6 +22,11 @@ public class InventoryImpl implements Inventory {
         return inventory;
     }
 
+    /*  Checks whether the local inventory has an item
+     *
+     *  @param  itemID     The ID of the item
+     *  @return            Boolean
+     */
     public boolean hasItem(String itemID) throws InvalidDataException {
         for (Stock stock : inventory) {
             if (stock.getID().equals(itemID)) {
@@ -31,6 +36,11 @@ public class InventoryImpl implements Inventory {
         return false;
     }
 
+    /*  This checks to see if an item is valid and is in stock
+     *
+     *  @param  itemID      The ID of the item
+     *  @return             boolean
+     */
     public boolean itemInStock(String itemID) throws InvalidDataException {
         for (Stock stock : inventory) {
             if (stock.getID().equals(itemID) && (stock.getQuantity() > 0)) {
@@ -40,6 +50,11 @@ public class InventoryImpl implements Inventory {
         return false;
     }
 
+    /*  Returns the stock of an item with a given ID
+     *
+     *  @param  id        The id of the requested item
+     *  @return           The corresponding Stock object
+     */
     public Stock getStock(String id) throws InvalidDataException {
         if (id == null) {
             throw new InvalidDataException("null id passed to getStock");
@@ -52,6 +67,11 @@ public class InventoryImpl implements Inventory {
         return null;
     }
 
+    /*  Returns the quantity of an item in stock
+     *
+     *  @param  id        The id of the requested item
+     *  return            The quantity in the corresponding Stock object
+     */
     public Integer getStockQty(String id) throws InvalidDataException {
         if (id == null) {
             throw new InvalidDataException("null id passed to getStockQty");
@@ -64,6 +84,13 @@ public class InventoryImpl implements Inventory {
         return null;
     }
 
+    /*  Returns the amount actually shipped from inventory.
+     *
+     *  @param itemID        The id of the item to be shipped
+     *  @param qty           The quantity that is desired
+     *  @return              The actual quantity shipped and
+     *                        removed from inventory
+     */
     public Integer shipQty(String itemID, Integer qty) throws InvalidDataException {
         if (qty < 0) {
             throw new InvalidDataException("Negative qty passed to shipQty in InventoryImpl");

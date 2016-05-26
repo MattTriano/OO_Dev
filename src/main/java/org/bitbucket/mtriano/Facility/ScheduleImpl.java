@@ -5,7 +5,7 @@ import org.bitbucket.mtriano.InvalidDataException;
 import java.util.ArrayList;
 
 /**
- * Created by Matt on 5/17/2016.
+ * Implements the Schedule interface
  */
 public class ScheduleImpl implements Schedule{
 
@@ -29,7 +29,13 @@ public class ScheduleImpl implements Schedule{
         days = plannedDays;
     }
 
-    public void scheduleProduction(Integer startDay, Integer quantity) throws InvalidDataException {
+    /*  Schedules production and updates the schedule accordingly
+     *
+     *  @param  startDay     The first day that this request could begin processing
+     *  @param  quantity     The quantity of work to be scheduled
+     */
+    public void scheduleProduction(Integer startDay, Integer quantity)
+            throws InvalidDataException {
         if (quantity < 0) {
             throw new InvalidDataException("Invalid quantity passed to scheduleProduction");
         }
@@ -52,10 +58,12 @@ public class ScheduleImpl implements Schedule{
         }
     }
 
-    public ArrayList<Integer> getAvailability() throws InvalidDataException {
+    public ArrayList<Integer> getSchedule() throws InvalidDataException {
         return schedule;
     }
 
+    /*  Prints the current schedule
+     */
     public void printSchedule() {
         System.out.print("Day:        ");
         for (int i = 1; i <= days; i++) {

@@ -4,7 +4,7 @@ import org.bitbucket.mtriano.Facility.Facility;
 import org.bitbucket.mtriano.InvalidDataException;
 
 /**
- * Created by Matt on 5/19/2016.
+ * Interface for a FacilityRecord
  */
 public interface FacilityRecord {
 

@@ -1,12 +1,12 @@
 package org.bitbucket.mtriano.Order;
 
-import org.bitbucket.mtriano.FacilityNetwork;
+import org.bitbucket.mtriano.Singletons.FacilityNetwork;
 import org.bitbucket.mtriano.InvalidDataException;
 
 import java.util.ArrayList;
 
 /**
- * Created by Matt on 5/18/2016.
+ * Implements the Order interface
  */
 public class OrderImpl implements Order {
 

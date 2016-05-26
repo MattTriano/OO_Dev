@@ -5,8 +5,8 @@ import org.bitbucket.mtriano.InvalidDataException;
 
 import java.util.ArrayList;
 
-/**
- * Created by Matt on 5/21/2016.
+/** This class keeps track of the fulfillment of orders and handles the
+ *  printing of solutions. *
  */
 public class OrderFulfillmentImpl implements OrderFulfillment {
 
@@ -15,7 +15,6 @@ public class OrderFulfillmentImpl implements OrderFulfillment {
     private ArrayList<Integer> costs;
     private Integer totalCost;
 
-    //todo clean this up, figure out what you were doing with the arraylists of arraylists.
     public OrderFulfillmentImpl(Order filledOrder, ArrayList<ArrayList<FacilityRecord>> fillingRecords,
                                 ArrayList<Integer> lineCosts) throws InvalidDataException {
         if (filledOrder == null) {
@@ -34,6 +33,11 @@ public class OrderFulfillmentImpl implements OrderFulfillment {
         totalCost = totalOrderCost(costs);
     }
 
+    /*  Determines the first arrival day for an entire order
+     *
+     *  @return    The day of the first arrival of
+     *              material from an order.
+     */
     private Integer firstDelivery() throws InvalidDataException {
         Integer earliestDelivery = 30;
         for (ArrayList<FacilityRecord> recordRecord : records) {
@@ -46,6 +50,14 @@ public class OrderFulfillmentImpl implements OrderFulfillment {
         return earliestDelivery;
     }
 
+    /*  Determines the first day of arrival for material for
+     *  a single line on an order
+     *
+     *  @param  lineRecord     Takes the arraylist of FacilityRecords the
+     *                           describes the filling solution for a line
+     *  @return                The day of the first arrival of material
+     *                           from this line
+     */
     private Integer firstDelivery(ArrayList<FacilityRecord> lineRecord) throws InvalidDataException {
         Integer earliestDelivery = 30;
         for (FacilityRecord record : lineRecord) {
@@ -56,6 +68,11 @@ public class OrderFulfillmentImpl implements OrderFulfillment {
         return earliestDelivery;
     }
 
+    /*  Determines the last arrival day for an entire order
+     *
+     *  @return    The day of the last arrival of
+     *              material from an order.
+     */
     private Integer lastDelivery() throws InvalidDataException {
         Integer lastDelivery = 0;
         for (ArrayList<FacilityRecord> recordRecord : records) {
@@ -68,6 +85,14 @@ public class OrderFulfillmentImpl implements OrderFulfillment {
         return lastDelivery;
     }
 
+    /*  Determines the last day of arrival for material for
+     *  a single line on an order
+     *
+     *  @param  lineRecord     Takes the arraylist of FacilityRecords the
+     *                           describes the filling solution for a line
+     *  @return                The day of the last arrival of material
+     *                           from this line
+     */
     private Integer lastDelivery(ArrayList<FacilityRecord> lineRecord) throws InvalidDataException {
         Integer lastDelivery = 0;
         for (FacilityRecord record : lineRecord) {
@@ -79,13 +104,17 @@ public class OrderFulfillmentImpl implements OrderFulfillment {
     }
 
     @Override
+    /*  Public method that will print out this order fulfillment strategy
+     */
     public void printOrderFulfillment() throws InvalidDataException {
         printOrderHeader();
         printSolution();
     }
 
+    /*  Helper method that prints out the order header
+     */
     private void printOrderHeader() throws InvalidDataException {
-        System.out.println("\u2022 Order ID:      " + order.getOrderID());
+        System.out.println("\n\u2022 Order ID:      " + order.getOrderID());
         System.out.println("\u2022 Order Time:    Day " + order.getStartDay());
         System.out.println("\u2022 Destination:   " + order.getDestination());
         ArrayList<Line> orderLines = order.getOrderLines();
@@ -95,6 +124,8 @@ public class OrderFulfillmentImpl implements OrderFulfillment {
         System.out.println(" ");
     }
 
+    /*  Prints the header data for the fulfillment of the lines
+     */
     private void printSolution() throws InvalidDataException {
         System.out.println("Processing Solution: ");
         System.out.printf("\u2022 Total Cost:      $%,01d %n", totalCost);
@@ -102,11 +133,11 @@ public class OrderFulfillmentImpl implements OrderFulfillment {
         System.out.println("\u2022 Last Delivery Day: " + lastDelivery());
         System.out.println("\u2022 Order Items: ");
         printItems();
-
     }
 
+    /*  Prints the information for the line items on this order
+     */
     private void printItems() throws InvalidDataException {
-//        System.out.println("  Item ID  Quantity  Cost        # Sources Used  First Day  Last Day");
         System.out.printf("  %-8s %-9s %-11s %-15s %-10s %-9s %n", "Item ID", "Quantity",
                 "Cost", "# Sources Used", "First Day", "Last Day");
         ArrayList<Line> orderLines = order.getOrderLines();
@@ -130,7 +161,15 @@ public class OrderFulfillmentImpl implements OrderFulfillment {
 
     }
 
-    private Integer lineCompletelyFilled(ArrayList<FacilityRecord> lineRecords) throws InvalidDataException {
+    /*  Sums the number of items filled.  The is used to check if there
+     *  should be a backorder or not.
+     *
+     *  @param  lineRecords     Takes the arraylist of FacilityRecords the
+     *                           describes the filling solution for a line
+     *  @return                 The number if items filled in lineRecords
+     */
+    private Integer lineCompletelyFilled(ArrayList<FacilityRecord> lineRecords)
+            throws InvalidDataException {
         Integer qtyFilled = 0;
         for (FacilityRecord record : lineRecords) {
             qtyFilled += record.getFillQty();
@@ -138,6 +177,11 @@ public class OrderFulfillmentImpl implements OrderFulfillment {
         return qtyFilled;
     }
 
+    /*  Helper method that sums the costs of the lines.
+     *
+     *  @param lineCosts     A list of the total cost of each line
+     *  @return              The sum of those costs
+     */
     private Integer totalOrderCost(ArrayList<Integer> lineCosts) throws InvalidDataException {
         Integer totalCost = 0;
         for (Integer cost : lineCosts) {
@@ -147,6 +191,10 @@ public class OrderFulfillmentImpl implements OrderFulfillment {
     }
 
     @Override
+    /*  Returns the total cost for this order fulfillment.  Simple getter.
+     *
+     *  @return               totalCost
+     */
     public Integer getTotalOrderCost() throws InvalidDataException {
         return totalCost;
     }

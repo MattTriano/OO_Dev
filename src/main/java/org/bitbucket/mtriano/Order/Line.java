@@ -3,7 +3,7 @@ package org.bitbucket.mtriano.Order;
 import org.bitbucket.mtriano.InvalidDataException;
 
 /**
- * Created by Matt on 5/18/2016.
+ * Interface for a Line (as in order line) object
  */
 public interface Line {
 
