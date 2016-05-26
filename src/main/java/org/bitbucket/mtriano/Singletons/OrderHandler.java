@@ -22,6 +22,7 @@ public final class OrderHandler {
     FacilityNetwork net = FacilityNetwork.getInstance();
     ItemCatalog catalog = ItemCatalog.getInstance();
 
+    // Singleton access point
     public static OrderHandler getInstance() {
         if (instance == null) {
             synchronized (OrderHandler.class) {
@@ -39,7 +40,8 @@ public final class OrderHandler {
         orderList = loader.getOrderList();
     }
 
-    /*  Singleton access point  */
+    /*  returns the list of orders
+     */
     public ArrayList<Order> getOrderList() {
         return getInstance().orderList;
     }
@@ -54,6 +56,11 @@ public final class OrderHandler {
 
     }
 
+    /*  Wrapper class that prints the order number and processes an order
+     *
+     *  @param  order           The order to be processed
+     *  @param  orderNumber     The number of the order
+     */
     public void processOrder(Order order, Integer orderNumber)
             throws InvalidDataException {
         if (orderNumber < 0) {
@@ -65,8 +72,9 @@ public final class OrderHandler {
         printDashes();
     }
 
-    /*
+    /*  Processes an order and orchestrates all of the calculation that that entails
      *
+     *  @param order        The order to be processed
      */
     public void processOrder(Order order) throws InvalidDataException{
         ArrayList<Line> orderLines = order.getOrderLines();
@@ -99,13 +107,17 @@ public final class OrderHandler {
             }
             orderSolution.add(lineSolution);
             lineCosts.add(lineCost(itemCost, lineSolution));
-//            System.out.println("");
         }
-
         OrderFulfillment fill = OrderFulfillmentFactory.createOrderFulfillment(order, orderSolution, lineCosts);
         fill.printOrderFulfillment();
     }
 
+    /*  Calculates the cost of a single line
+     *
+     *  @param  itemCost            The unit cost of the item for a given line
+     *  @param  solutionRecords     The FacilityRecords that hold the fulfillment strategy for that line
+     *  @return                     The total cost of a line
+     */
     public Integer lineCost(Integer itemCost, ArrayList<FacilityRecord> solutionRecords)
             throws InvalidDataException {
         int totalItemCost = 0;
@@ -146,8 +158,6 @@ public final class OrderHandler {
         }
         return minRec;
     }
-
-
 
     /*  generates the FacilityRecords that satisfy a line on an order
      *
@@ -198,6 +208,8 @@ public final class OrderHandler {
         return sources;
     }
 
+    /*  Prints a line of dashes
+     */
     private void printDashes() throws InvalidDataException {
         System.out.println("-----------------------------------------------------------------------------");
     }
