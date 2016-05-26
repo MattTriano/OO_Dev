@@ -1,6 +1,9 @@
-package org.bitbucket.mtriano;
+package org.bitbucket.mtriano.Singletons;
 
 import org.bitbucket.mtriano.Facility.Facility;
+import org.bitbucket.mtriano.FacilityLoader;
+import org.bitbucket.mtriano.FacilityNetworkXML;
+import org.bitbucket.mtriano.InvalidDataException;
 import org.bitbucket.mtriano.Inventory.Inventory;
 import org.bitbucket.mtriano.Inventory.Stock;
 import org.bitbucket.mtriano.LinkedCity.LinkedCity;

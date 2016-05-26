@@ -1,9 +1,7 @@
-package org.bitbucket.mtriano;
+package org.bitbucket.mtriano.XMLReaders;
 
-import org.bitbucket.mtriano.Order.Line;
-import org.bitbucket.mtriano.Order.LineImplFactory;
-import org.bitbucket.mtriano.Order.Order;
-import org.bitbucket.mtriano.Order.OrderImplFactory;
+import org.bitbucket.mtriano.InvalidDataException;
+import org.bitbucket.mtriano.Order.*;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 

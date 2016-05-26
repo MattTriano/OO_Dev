@@ -1,5 +1,6 @@
-package org.bitbucket.mtriano;
+package org.bitbucket.mtriano.XMLReaders;
 
+import org.bitbucket.mtriano.InvalidDataException;
 import org.bitbucket.mtriano.Item.Item;
 import org.bitbucket.mtriano.Item.ItemImplFactory;
 import org.bitbucket.mtriano.Item.ItemLoader;

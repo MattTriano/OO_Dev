@@ -1,4 +1,4 @@
-package org.bitbucket.mtriano;
+package org.bitbucket.mtriano.Facility;
 
 import org.bitbucket.mtriano.Facility.Facility;
 

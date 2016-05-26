@@ -1,7 +1,10 @@
-package org.bitbucket.mtriano;
+package org.bitbucket.mtriano.Singletons;
 
 import org.bitbucket.mtriano.Facility.Facility;
+import org.bitbucket.mtriano.InvalidDataException;
+import org.bitbucket.mtriano.ItemCatalog;
 import org.bitbucket.mtriano.Order.*;
+import org.bitbucket.mtriano.OrderReaderXML;
 import org.bitbucket.mtriano.ShortestPath.ShortestPath;
 import org.bitbucket.mtriano.ShortestPath.ShortestPathAllPairsImplFactory;
 

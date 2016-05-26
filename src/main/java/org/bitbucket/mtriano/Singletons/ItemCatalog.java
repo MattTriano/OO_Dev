@@ -1,7 +1,9 @@
-package org.bitbucket.mtriano;
+package org.bitbucket.mtriano.Singletons;
 
+import org.bitbucket.mtriano.InvalidDataException;
 import org.bitbucket.mtriano.Item.Item;
 import org.bitbucket.mtriano.Item.ItemLoader;
+import org.bitbucket.mtriano.XMLReaders.ItemLoaderXML;
 
 import java.util.ArrayList;
 
